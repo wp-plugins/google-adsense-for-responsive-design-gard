@@ -61,7 +61,13 @@ GARD Pro contains the following features:
 = 1.0 =
 * Initial release.
 
+= 1.0.1 =
+* Fixed incorrect admin icon code.
+
 == Upgrade Notice ==
 
 = 1.0 =
 Initial release. No upgrade needed.
+
+= 1.0.1 =
+Only upgrade to fix icon in admin dashboard. No functionality changes.
