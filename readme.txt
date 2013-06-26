@@ -18,7 +18,7 @@ Set up is easy, simply create AdSense ads for the different sizes that you want 
 
 [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro") extends the capabilities of GARD by allowing things like custom shortcode, auto insert GARD into posts, and a responsive widget.
 
-Find out more about [GARD Pro here](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro").
+Find out more about [GARD Pro here](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro").  
 
 Support: [The Digital Hippies Official Wordpress Plugin Support Forums](http://thedigitalhippies.com/pluginsupport "The Digital Hippies Wordpress Plugin Support Forums")
 
