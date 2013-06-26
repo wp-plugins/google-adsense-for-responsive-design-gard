@@ -1,4 +1,4 @@
-=== GARD ===
+=== Google AdSense for Responsive Design - GARD ===
 Contributors: http://profiles.wordpress.org/the-digital-hippies
 Donate link: http://thedigitalhippies.com/donate
 Tags: responsive, AdSense, responsive AdSense, Google AdSense, responsive ads, responsive design, responsive design, gard
@@ -8,7 +8,7 @@ Stable tag: 3.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-GARD (Google AdSense for Responsive Design) allows you to easily place Google AdSense in your website's content via the use of the shortcode [GARD]. 
+GARD (Google AdSense for Responsive Design) allows you to easily place Google AdSense in your website's content via the use of a shortcode. 
 
 == Description ==
 
@@ -19,6 +19,7 @@ Set up is easy, simply create AdSense ads for the different sizes that you want 
 [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro") extends the capabilities of GARD by allowing things like custom shortcode, auto insert GARD into posts, and a responsive widget.
 
 Find out more about [GARD Pro here](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro").
+
 Support: [The Digital Hippies Official Wordpress Plugin Support Forums](http://thedigitalhippies.com/pluginsupport "The Digital Hippies Wordpress Plugin Support Forums")
 
 == Installation ==
