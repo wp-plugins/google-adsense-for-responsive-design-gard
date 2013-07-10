@@ -58,16 +58,25 @@ GARD Pro contains the following features:
 
 == Changelog ==
 
-= 1.0 =
-* Initial release.
+= 1.1 =
+* Prepaired for integration with GARD Pro: http://thedigitalhippies.com/gardpro
+* Fixed icon on settings page
 
 = 1.0.1 =
 * Fixed incorrect admin icon code.
 
+= 1.0 =
+* Initial release.
+
 == Upgrade Notice ==
 
-= 1.0 =
-Initial release. No upgrade needed.
+= 1.1 =
+* Prepaired for integration with GARD Pro: http://thedigitalhippies.com/gardpro
+* Fixed icon on settings page
+* Other minor code changes
 
 = 1.0.1 =
 Only upgrade to fix icon in admin dashboard. No functionality changes.
+
+= 1.0 =
+Initial release. No upgrade needed.

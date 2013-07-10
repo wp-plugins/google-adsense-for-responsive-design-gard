@@ -3,7 +3,7 @@
     Plugin Name: Google Adsense for Responsive Design - GARD
 	Plugin URI: http://thedigitalhippies.com/gard
 	Description: Allows you to use shortcode to display responsive adsense ads throughout your responsive theme.
-	Version: 1.0.1
+	Version: 1.1
 	Author: The Digital Hippies
 	Author URI: http://thedigitalhippies.com
 */
@@ -20,7 +20,8 @@ if(!class_exists('GARDPluginOptions')) {
 		}
 		public static function register() {
 		    register_setting(GARDPLUGINOPTIONS_ID.'_options', 'GARD_ID');
-		    if(_procheck() == "licensed") { include(dirname(dirname(__FILE__)).'/gard-pro/config/reg.php'); }
+		    register_setting(GARDPLUGINOPTIONS_ID.'_hash', 'GARD_HASH');
+		    if(_procheck() == "licensed") { include(dirname(dirname(__FILE__)).'/gard-pro/register.php'); }
 		    global $adsizes;
 			foreach($adsizes as $size => $key) {register_setting(GARDPLUGINOPTIONS_ID.'_options', 'GARD_'.$size);}
 		}		
@@ -42,7 +43,7 @@ if(!class_exists('GARDPluginOptions')) {
 		$capability = 'manage_options';
 		$menu_slug = 'GARD';
 		$function = 'gard_options_page' ;
-		$icon_url = plugins_url( 'icon.png' , __FILE__ );
+		$icon_url = plugins_url().'/google-adsense-for-responsive-design-gard/icon.png';
 		add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function , $icon_url ); 
     
 		$parent_slug = 'GARD';
@@ -101,8 +102,7 @@ if(!class_exists('GARDPluginOptions')) {
 			google_ad_client = "'.$id.'";			
 			if ( adWidth >= 999999 ) {
 					/* GETTING THE FIRST IF OUT OF THE WAY */ 
-				}
-				';
+				} ';
 
 		global $adsizes;
 		foreach($adsizes as $size => $description) {
@@ -112,32 +112,24 @@ if(!class_exists('GARDPluginOptions')) {
 			$size2 = $size[1];
 
 			if ( strlen($code) == '10' && is_numeric($code)) {			
-				$adsense .= ' 
-
-				else if ( adWidth >= '.$size1.' ) {
+				$adsense .= ' else if ( adWidth >= '.$size1.' ) {
 						google_ad_slot = "'.$code.'";
 						google_ad_width = '.$size1.';
 						google_ad_height = '.$size2.';
-					} 
-
-					';
+					} ';
 			}
 		}
 
-		$adsense .= '
-
-		 else {
+		$adsense .= ' else {
 				google_ad_slot	 = "0";
 				adUnit.style.display = "none";
-			}
-
-			</script>
+			}</script>
 			<script data-cfasync="false" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>';
 		return $adsense;
 	}
 
 	if(_procheck(TRUE)) {
-		include(dirname(dirname(__FILE__)).'/gard-pro/config/ins.php');
+		include(dirname(dirname(__FILE__)).'/gard-pro/insert.php');
 	} else {
 		add_shortcode( 'GARD', '_GARD' );
 		add_shortcode( 'gard', '_GARD' );

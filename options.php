@@ -19,7 +19,7 @@ if( function_exists(_procheck) ) {
 	}
 </style>
 <div class="wrap">
-	<?php screen_icon(); ?>
+	<?php screen_icon('plugins'); ?>
 	
 	<form method="post" action="options.php" id="<?php echo $plugin_id; ?>_options_form" name="<?php echo $plugin_id; ?>_options_form">
 	
@@ -135,28 +135,28 @@ if( function_exists(_procheck) ) {
        				<a href="http://thedigitalhippies.com/gardpro" style='text-align: center;width: 100%;display: block;font-size: 20px;margin-top: 28px;color: #c00;font-weight: bold;'>Upgrade to GARD Pro Today!<br/><img src="<?php echo $pluginurl; ?>pro.png" style="margin: 17px 0 0 4px"/></a>
 					<br/>
 				<?php } ?>
-    			<a href="http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=416BC-">
+    			<a style="display: initial !important;" href="http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=416BC-">
     				<h3>WordPress Hosting - Starting @ $3.96</h3></a>
     				<ul class="smallgray">
     					<li>Unlimited Blogs.</li>
     					<li>1 Click Auto Installs.</li>
     				</ul>
 
-    			<a href="https://managewp.com/?utm_source=A&utm_medium=Link&utm_campaign=A&utm_mrl=876">
+    			<a style="display: initial !important;" href="https://managewp.com/?utm_source=A&utm_medium=Link&utm_campaign=A&utm_mrl=876">
     				<h3>ManageWP</h3></a>
     				<ul class="smallgray">
     					<li>The easiest way to manage all of your WordPress sites.</li>
     					<li>Access, manage, update, and backup all your WordPress sites from one powerful dashboard.</li>
     				</ul>
 
-    			<a href='http://premium.wpmudev.org?ref=416bc-17527'>
+    			<a style="display: initial !important;" href='http://premium.wpmudev.org?ref=416bc-17527'>
     				<h3>WPMUDEV</h3></a>
     				<ul class="smallgray">
     					<li>There´s a WPMU DEV plugin for everything your clients can dream up</li>
 						<li>Hundreds of amazing WordPress plugins and themes you'll love starting at just $9.</li>
 					</ul>
 
-    			<a href='http://www.amazon.com/gp/product/0615684742/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&tag=tdhplugin-20&creativeASIN=0615684742&linkCode=as2'>
+    			<a style="display: initial !important;" href='http://www.amazon.com/gp/product/0615684742/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&tag=tdhplugin-20&creativeASIN=0615684742&linkCode=as2'>
     				<h3>WordPress Revealed</h3></a>
     				<ul class="smallgray">
     					<li>How to Build a Website, Get Visitors and Make Money</li>
