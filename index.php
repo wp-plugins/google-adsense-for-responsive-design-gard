@@ -3,7 +3,7 @@
     Plugin Name: Google Adsense for Responsive Design - GARD
 	Plugin URI: http://thedigitalhippies.com/gard
 	Description: Allows you to use shortcode to display responsive adsense ads throughout your responsive theme.
-	Version: 1.1
+	Version: 1.2
 	Author: The Digital Hippies
 	Author URI: http://thedigitalhippies.com
 */
@@ -20,12 +20,29 @@ if(!class_exists('GARDPluginOptions')) {
 		}
 		public static function register() {
 		    register_setting(GARDPLUGINOPTIONS_ID.'_options', 'GARD_ID');
-		    register_setting(GARDPLUGINOPTIONS_ID.'_hash', 'GARD_HASH');
-		    if(_procheck() == "licensed") { include(dirname(dirname(__FILE__)).'/gard-pro/register.php'); }
+		    register_setting(GARDPLUGINOPTIONS_ID.'_options', 'GARD_UNINSTALL');
+		    register_setting(GARDPLUGINOPTIONS_ID.'_options', 'GARD_HELP');
+		    if(_procheck()) { include(dirname(dirname(__FILE__)).'/gard-pro/register.php'); }
 		    global $adsizes;
 			foreach($adsizes as $size => $key) {register_setting(GARDPLUGINOPTIONS_ID.'_options', 'GARD_'.$size);}
 		}		
 	}
+
+	function gard_on_deactivate() {
+		# source http://dannyvankooten.com/199/remove-your-wp-plugins-stored-data/
+	    if ( 1 == get_option('GARD_UNINSTALL') ) {
+			delete_option('myplugin_used_option');
+
+			delete_option('GARD_ID');
+			delete_option('GARD_UNINSTALL');
+			delete_option('GARD_HELP');
+		    if(_procheck()) { include(dirname(dirname(__FILE__)).'/gard-pro/unregister.php'); }
+		    global $adsizes;
+			foreach($adsizes as $size => $key) {
+				delete_option('GARD_'.$size);}
+	    }
+	}
+	register_deactivation_hook(__FILE__, 'gard_on_deactivate');
 
 	function gard_options_page() { 
 			if (!current_user_can('manage_options')) 
@@ -44,8 +61,19 @@ if(!class_exists('GARDPluginOptions')) {
 		$menu_slug = 'GARD';
 		$function = 'gard_options_page' ;
 		$icon_url = plugins_url().'/google-adsense-for-responsive-design-gard/icon.png';
+		$icon_url = plugin_dir_url( __FILE__ ).'icon.png';
 		add_menu_page( $page_title, $menu_title, $capability, $menu_slug, $function , $icon_url ); 
-    
+
+    // HELP PAGE
+		$parent_slug = 'GARD';
+		$page_title = 'GARD Help';
+		$menu_title = 'GARD Help';
+		$capability = 'manage_options';
+		$menu_slug = 'gard-help';
+		$function  = 'gard_help' ;
+		add_submenu_page( $parent_slug, $page_title, $menu_title, $capability, $menu_slug, $function );
+
+    // PRO PAGE
 		$parent_slug = 'GARD';
 		$page_title = 'GARD Pro';
 		$menu_title = 'GARD Pro';
@@ -62,10 +90,17 @@ if(!class_exists('GARDPluginOptions')) {
 			include(dirname(__FILE__) . '/options.php');
 	}
 
+	function gard_help()  { 
+			if (!current_user_can('manage_options')) 
+			{
+				wp_die( __('You do not have sufficient permissions to access this page.') );
+			}
+			$plugin_id = GARDPLUGINOPTIONS_ID;
+			include(dirname(__FILE__) . '/help.php');
+	}
+
 	function gard_pro_settings() {
-		if (_procheck() ==  "unactivated") {
-			echo "<br/><h2>You must activate the GARD Pro plugin before you can register it.</h2>";	
-		} elseif (_procheck() ==  "active" OR _procheck() == "licensed" OR _procheck() == "unlicensed") {
+		if( _procheck() ) {
 			gard_license_page();
 		} else {
 			echo "<br/><br/><b>Upgrade to <a href='#' target='_blank'>GARD Pro</a> today</b>:
@@ -83,14 +118,6 @@ if(!class_exists('GARDPluginOptions')) {
 		}
 	}
 
-	function gard_settings() {
-		if (!current_user_can('manage_options')) {
-				wp_die( __('You do not have sufficient permissions to access this page.') );
-			}			
-			$plugin_id = CCPLUGINOPTIONS_ID;
-			include(file_path('options.php'));
-	}
-
 	function _GARD( ) {
 		$id = "ca-pub-".get_option("GARD_ID");
 		$num = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 4);
@@ -102,7 +129,7 @@ if(!class_exists('GARDPluginOptions')) {
 			google_ad_client = "'.$id.'";			
 			if ( adWidth >= 999999 ) {
 					/* GETTING THE FIRST IF OUT OF THE WAY */ 
-				} ';
+				}';
 
 		global $adsizes;
 		foreach($adsizes as $size => $description) {
@@ -116,7 +143,7 @@ if(!class_exists('GARDPluginOptions')) {
 						google_ad_slot = "'.$code.'";
 						google_ad_width = '.$size1.';
 						google_ad_height = '.$size2.';
-					} ';
+					}';
 			}
 		}
 
