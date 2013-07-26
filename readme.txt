@@ -96,6 +96,9 @@ Support is available on [The Digital Hippies Official Wordpress Plugin Support F
 
 == Changelog ==
 
+= 1.2.1 =
+* Added 320x50 Mobile Banner Size
+
 = 1.2 =
 * Added a help page, complete with video setup guide.
 
@@ -110,6 +113,9 @@ Support is available on [The Digital Hippies Official Wordpress Plugin Support F
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+* Added 320x50 Mobile Banner Size
 
 = 1.2 =
 * Added a help page, complete with video setup guide.
