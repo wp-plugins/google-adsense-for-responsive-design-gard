@@ -12,23 +12,23 @@ GARD (Google AdSense for Responsive Design) allows you to easily place Google Ad
 
 == Description ==
 
-GARD allows you to easily place responsive Google AdSense in your website's content via the use of the shortcode [GARD], custom shortcode option available in [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro").
+GARD allows you to easily place responsive (asynchronous optional) Google AdSense in your website's content via the use of the shortcode [GARD], custom shortcode option available in [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSense for Responsive Design Pro").
 
-The inserted ads will never excede the content area width, and will select the right size ad to show depending on which ads you have provided GARD to pick from.
+The inserted ads will never exceed the content area width, and will select the right size ad to show depending on which ads you have provided GARD to pick from.
 
-GARD does not resize ads on the fly, because most users don't resize their browsers while viewing your website. Instead on initial page load, it determins the optimal ad for that position, and shows that ad.
+GARD does not resize ads on the fly, because most users don't resize their browsers while viewing your website. Instead on initial page load, it determines the optimal ad for that position, and shows that ad.
 
 Setup is easy. Create AdSense ads for the different sizes that you want to use on your website, then input the AdSense google_ad_slot number into the GARD settings page next to that ads dimension. That's it!
 
-[GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro") extends the capabilities of GARD by allowing things like customizing the shortcode, auto insert GARD into posts & pages, and a responsive widget.
+[GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSense for Responsive Design Pro") extends the capabilities of GARD by allowing things like customizing the shortcode, auto insert GARD into posts & pages, and a responsive widget.
 
-[Click here to find out more about GARD Pro now](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro").
+[Click here to find out more about GARD Pro now](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSense for Responsive Design Pro").
 
-Support: [The Digital Hippies Official Wordpress Plugin Support Forums](http://thedigitalhippies.com/pluginsupport "The Digital Hippies Wordpress Plugin Support Forums")
+Support: [The Digital Hippies Official WordPress Plugin Support Forums](http://thedigitalhippies.com/pluginsupport "The Digital Hippies WordPress Plugin Support Forums")
 
 == Installation ==
 
-1. Install from wordpress admin dashboard or extract and upload the contents of 'google-adsense-for-responsive-design-gard.zip' to the '/wp-content/plugins/' directory
+1. Install from WordPress admin dashboard or extract and upload the contents of 'google-adsense-for-responsive-design-gard.zip' to the '/wp-content/plugins/' directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Place the shortcode [GARD] inside any posts and/or pages where you want your responsive AdSense ads to show
 1. Profit??? (Literally, it's AdSense, so.... Profit!)
@@ -38,6 +38,15 @@ Support: [The Digital Hippies Official Wordpress Plugin Support Forums](http://t
 = Do I need my own AdSense account to make this work? =
 
 Yes.
+
+= Can I make my ads align left or right? =
+
+Yes. If you would like your ads to align left, use the shortcode [GARD align="left"]. The same is true for center and right.  
+Samples:  
+[GARD] will not center or wrap text.  
+[GARD align="left"] will make your ad align left and text wrap around it.  
+[GARD align="center"] will make your ad centered and text wrap NOT around it.  
+[GARD align="right"] will make your ad align right and text wrap around it.  
 
 = Do I have to create ads for every size? =
 
@@ -50,27 +59,27 @@ Google will not allow more than three AdSense ads to load per page. GARD cannot 
 
 = Can I change the shortcode text? =
 
-Yes, with [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro"). (See "What are the GARD Pro Features" below.)
+Yes, with [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSense for Responsive Design Pro"). (See "What are the GARD Pro Features" below.)
 
 = Can I use GARD in widget areas? =
 
-Yes, with [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro"). (See "What are the GARD Pro Features" below.)
+Yes, with [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSense for Responsive Design Pro"). (See "What are the GARD Pro Features" below.)
 
 = Can I use GARD automatically in old posts and pages? =
 
-Yes, with [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro"). (See "What are the GARD Pro Features" below.)
+Yes, with [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSense for Responsive Design Pro"). (See "What are the GARD Pro Features" below.)
 
 = What are the different versions of the plugin? =
 
 GARD (What you're looking at now)  
-[GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro") (Offers many additional features to extend GARD)  
+[GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSense for Responsive Design Pro") (Offers many additional features to extend GARD)  
 * GARD Pro costs $29.95, and is appropriate if you expect to make more than $29.95 in ad revenue from your site. :P
 
 = GARD Pro FAQ =
 
 = What are the GARD Pro Features? =
 
-[GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google Adsense for Responsive Design Pro") offers the following additional features: 
+[GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSense for Responsive Design Pro") offers the following additional features: 
 
 1. Auto insert GARD into all old posts and/or pages
 1. Create optional custom shortcode to replace default shortcode [GARD]
@@ -85,8 +94,17 @@ Yes. Simply leave the checkbox on the widget titled "Display GARD for registered
 = Can I give my widget a custom title? =
 Yes. Just fill in the widget title after you place the widget.
 
+= Can I have GARD Pro insert ads randomly throughout all content? =
+Yes. In the option titled 'Auto insert AdSense after paragraphs' enter the word *random*. Once you enter the word random in that option, you'll see a second set of options asking you how many ads you want to automatically enter per article. You can select 1,2,3 or random to show between 1 and 3 ads per article.
+
+= Can I specify which post types get ads automatically inserted? =
+Yes. GARD Pro automatically detects all custom content types, and allows you to specify which types will get ads.
+
+= Can I specify the default alignment of automatically inserted ads? =
+Yes. You can select from the following; No Alignment, Aligned Left, Centered, Aligned Right, Random from the previous choices.
+
 = How do I contact the plugin developer for help? =
-Support is available on [The Digital Hippies Official Wordpress Plugin Support Forums](http://thedigitalhippies.com/pluginsupport "The Digital Hippies Wordpress Plugin Support Forums").
+Support is available on [The Digital Hippies Official WordPress Plugin Support Forums](http://thedigitalhippies.com/pluginsupport "The Digital Hippies WordPress Plugin Support Forums").
 
 == Screenshots ==
 
@@ -96,6 +114,14 @@ Support is available on [The Digital Hippies Official Wordpress Plugin Support F
 
 == Changelog ==
 
+= 1.3 =
+* [NEW FEATURE] GARD: Allow users to specify positioning of left, right, or center manually per ad.
+* [NEW FEATURE] GARD Pro: Insert ads randomly throughout content.
+* [NEW FEATURE] GARD Pro: Insert random number of ads in content.
+* [NEW FEATURE] GARD Pro: Default positioning of left, right, or center.
+* [NEW FEATURE] GARD Pro: Specify which custom post types to insert ads into.
+* [NEW BETA FEATURE] GARD & GARD Pro: Asynchronous AdSense
+
 = 1.2.1 =
 * Added 320x50 Mobile Banner Size
 
@@ -103,7 +129,7 @@ Support is available on [The Digital Hippies Official Wordpress Plugin Support F
 * Added a help page, complete with video setup guide.
 
 = 1.1 =
-* Prepaired for integration with GARD Pro: http://thedigitalhippies.com/gardpro
+* Prepared for integration with GARD Pro: http://thedigitalhippies.com/gardpro
 * Fixed icon on settings page
 
 = 1.0.1 =
@@ -114,6 +140,10 @@ Support is available on [The Digital Hippies Official Wordpress Plugin Support F
 
 == Upgrade Notice ==
 
+= 1.3 =
+* Added ability to align ads left, right, or center.
+* Enabled Asynchronous AdSense [BETA FEATURE]
+
 = 1.2.1 =
 * Added 320x50 Mobile Banner Size
 
@@ -121,7 +151,7 @@ Support is available on [The Digital Hippies Official Wordpress Plugin Support F
 * Added a help page, complete with video setup guide.
 
 = 1.1 =
-* Prepaired for integration with GARD Pro: http://thedigitalhippies.com/gardpro
+* Prepared for integration with GARD Pro: http://thedigitalhippies.com/gardpro
 * Fixed icon on settings page
 * Other minor code changes
 

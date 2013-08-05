@@ -1,5 +1,7 @@
 <?php
 wp_enqueue_script('jquery');
+wp_enqueue_script("jquery-effects-core");
+
 $pluginurl = plugin_dir_url(__FILE__);
 
 include('adsizes.php');    
@@ -10,7 +12,7 @@ if( function_exists(_procheck) ) {
 }
 ?>
 <style type="text/css">
-	.hiddenfields {display:none;}
+	.hiddenfields, .hidechild {display:none;}
 	.smallgray {
 		font-size: 12px;
 		color: #757575;
@@ -26,10 +28,10 @@ if( function_exists(_procheck) ) {
 	<?php settings_fields($plugin_id.'_options'); ?>
 	
 	<h2>Google Adsense for Responsive Design &raquo; Settings</h2>
-	<table style="max-width:735px;">
+	<table >
 		<tr>
 		<td style="vertical-align:top;">
-			<table class="widefat" style="width:420px">
+			<table class="widefat" style="max-width:444px">
 				<thead>
 				   <tr>
 					 <th colspan="2"><input type="submit" name="submit" value="Save Settings" class="button-primary" /></th>
@@ -44,8 +46,29 @@ if( function_exists(_procheck) ) {
 					 </td>
 					 <td  style="vertical-align:middle;text-align:right;">
 						ca-pub-<input type="text" name="GARD_ID" value="<?php echo get_option('GARD_ID'); ?>" style="padding:5px;" />
-					 </td>
+					</td>
 				   </tr>
+					 <td style="vertical-align:top;width:215px">
+						 <label for="GARD_ASYNC">
+						Asynchronous AdSense <span style="color:orange">[BETA]</span>
+						</label>
+						<br/>
+						<span class="smallgray" style="margin:0;font-size:11px;">BETA FEATURE: <a href='http://thedigitalhippies.com/pluginsupport' target='_blank' title='Report issues here.' style='text-decoration:underline'>Report issues here</a>.</span>
+						<br/>
+						<span class="smallgray" style="margin:0;font-size:11px;">KNOWN ISSUES: <a href='#' target='_blank' title='Show Known Issues' style='text-decoration:underline' class="hideparent">Show Known Issues</a>.</span>
+						<br/>
+						<ul class="hidechild smallgray" style="margin:7px 0 0 0;font-size:11px;">
+							<li>Does not work for widgets in GARD Pro.</li>
+							<li>Does not work with any other async AdSense. Must be the only async AdSense on the page.</li>
+							<li>Infrequently only 2 of 3 ads might load.</li>
+						</ul>
+
+					 </td>
+					 <td style="text-align:left;padding-left: 66px;vertical-align: top;">
+						<input type="checkbox" name="GARD_ASYNC" value="1" <? if(get_option('GARD_ASYNC') == 1) echo "checked"; ?> style="padding:5px;" />
+					</td>
+				   </tr>
+
 				   <?php
 						$finalvalue = '';
 			   			foreach($adsizes as $size => $key) {
@@ -96,7 +119,7 @@ if( function_exists(_procheck) ) {
 				</tbody>
 				<tfoot>
 				   <tr>
-					 <th><input type="submit" name="submit" value="Save Settings" class="button-primary" /></th>
+					 <th><input id="submit" type="submit" name="submit" value="Save Settings" class="button-primary" /></th>
 					 <th style="text-align:right;"><input id="hidebutton" type="button" name="toggle" value="Show Unused Sizes" class="button-secondary" /></th>
 				   </tr>
 				</tfoot>
@@ -122,7 +145,6 @@ if( function_exists(_procheck) ) {
 		} else {
 			echo "<br/><br/><b>Upgrade to <a href='http://thedigitalhippies.com/gardpro' target='_blank' title='GARD Pro'>GARD Pro</a> today</b>:
 			<ul style='list-style: disc;margin-left:50px;width: 360px;'>
-				<li>Remove all admin control panel ads.</li>
 				<li><a href='http://thedigitalhippies.com/gardpro' target='_blank' title='GARD Pro'><b>Custom Shortcode</b></a> - You can pick any shortcode you'd like to display your ads.</li>
 				<li><a href='http://thedigitalhippies.com/gardpro' target='_blank' title='GARD Pro'><b>Auto Insert GARD</b></a> - Automatically insert ads in ALL old posts after X number of paragraphs.</li>
 				<li><a href='http://thedigitalhippies.com/gardpro' target='_blank' title='GARD Pro'><b>GARD Widget</b></a> - Use responsive ads where ever you can use a widget! Also show to guests only, or everyone!</li>
@@ -133,7 +155,12 @@ if( function_exists(_procheck) ) {
 		<td style="vertical-align:top; padding-left:15px;padding-top: 15px;">
        			<?php if(!$var) { ?>
        				<a href="http://thedigitalhippies.com/gardpro" style='text-align: center;width: 100%;display: block;font-size: 20px;margin-top: 28px;color: #c00;font-weight: bold;'>Upgrade to GARD Pro Today!<br/><img src="<?php echo $pluginurl; ?>pro.png" style="margin: 17px 0 0 4px"/></a>
-					<br/>
+    				<h2><a href='http://thedigitalhippies.com/gardpro' target='_blank' title='GARD Pro'>Upgrade to GARD Pro!</a></h2>
+			<ul style='list-style: disc;margin-left:50px;width: 360px;'>
+				<li><a href='http://thedigitalhippies.com/gardpro' target='_blank' title='GARD Pro'><b>Custom Shortcode</b></a> - You can pick any shortcode you'd like to display your ads.</li>
+				<li><a href='http://thedigitalhippies.com/gardpro' target='_blank' title='GARD Pro'><b>Auto Insert GARD</b></a> - Automatically insert ads in ALL old posts after X number of paragraphs.</li>
+				<li><a href='http://thedigitalhippies.com/gardpro' target='_blank' title='GARD Pro'><b>GARD Widget</b></a> - Use responsive ads where ever you can use a widget! Also show to guests only, or everyone!</li>
+			</ul>
 				<?php } ?>
     			<a style="display: initial !important;" href="http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=416BC-">
     				<h3>WordPress Hosting - Starting @ $3.96</h3></a>
@@ -141,7 +168,7 @@ if( function_exists(_procheck) ) {
     					<li>Unlimited Blogs.</li>
     					<li>1 Click Auto Installs.</li>
     				</ul>
-
+    		<? /*
     			<a style="display: initial !important;" href="https://managewp.com/?utm_source=A&utm_medium=Link&utm_campaign=A&utm_mrl=876">
     				<h3>ManageWP</h3></a>
     				<ul class="smallgray">
@@ -162,6 +189,7 @@ if( function_exists(_procheck) ) {
     					<li>How to Build a Website, Get Visitors and Make Money</li>
 						<li>#1 Bestseller on Amazon!</li>
 					</ul>
+			*/ ?>
 		</td>
 		</tr>
 	</table>
@@ -171,16 +199,70 @@ if( function_exists(_procheck) ) {
 	jQuery(function ($) {
 		$('#hidebutton').click(
 			function() {
-			hidden = $('.hideoptions');
-			hidden.toggle();
-		    
-		    if ($(this).val() == 'Show Unused Sizes') {
-		        $(this).val('Hide Unused Sizes');
-		    } else {
-		        $(this).val('Show Unused Sizes');
-		    }
+				hidden = $('.hideoptions');
+				hidden.toggle();
+			    
+			    if ($(this).val() == 'Show Unused Sizes') {
+			        $(this).val('Hide Unused Sizes');
+			    } else if ($(this).val() == 'Hide Unused Sizes') {
+			        $(this).val('Show Unused Sizes');
+			    }
 
-		    return false;
+			    return false;
 		});
+
+
+
+		$(document).keydown(function(event) {
+			if (!( String.fromCharCode(event.which).toLowerCase() == 's' && event.ctrlKey) && !(event.which == 19)) return true;
+			$("#submit").click();
+			event.preventDefault();
+			return false;
+		});
+
+
+
+
+		$('.hideparent').click(
+			function() {
+				$(this).closest('td').find('.hidechild').slideToggle('slow');
+			    
+			    if ($(this).html() == 'Show Known Issues') {
+			        $(this).html('Hide Known Issues');
+			    } else if ($(this).html() == 'Hide Known Issues') {
+			        $(this).html('Show Known Issues');
+			    }
+
+			    if ($(this).text() == 'Show Examples & Tips') {
+			        $(this).text('Hide Examples & Tips');
+			    } else if ($(this).text() == 'Hide Examples & Tips') {
+			        $(this).text('Show Examples & Tips');
+			    }
+
+			    return false;
+
+		});
+
+		temp = $("input[name='GARD_AUTO_INSERT']").val();
+		if (temp == 'random') {
+			$("#GARD_AUTO_INSERT_COUNT").css('display','table-row');
+		}
+
+
+		$("input[name='GARD_AUTO_INSERT']").keyup(function(){
+			val = $(this).val();
+
+
+			if (val == 'random') {
+			   $("#GARD_AUTO_INSERT_COUNT").fadeIn('slow');
+			   // $("#GARD_AUTO_INSERT_COUNT").css('display','table-row');
+			} else {
+			   $("#GARD_AUTO_INSERT_COUNT").fadeOut('slow');
+			   // $("#GARD_AUTO_INSERT_COUNT").css('display','none');
+			}
+			return false;
+		});
+
+
 	});
 </script>
