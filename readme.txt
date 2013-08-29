@@ -73,7 +73,7 @@ Yes, with [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSe
 
 GARD (What you're looking at now)  
 [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSense for Responsive Design Pro") (Offers many additional features to extend GARD)  
-* GARD Pro costs $29.95, and is appropriate if you expect to make more than $29.95 in ad revenue from your site. :P
+* GARD Pro costs $39.95, and is appropriate if you expect to make more than $39.95 in ad revenue from your site. :P
 
 = GARD Pro FAQ =
 
@@ -81,9 +81,18 @@ GARD (What you're looking at now)
 
 [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSense for Responsive Design Pro") offers the following additional features: 
 
-1. Auto insert GARD into all old posts and/or pages
-1. Create optional custom shortcode to replace default shortcode [GARD]
-1. GARD Widget to show responsive AdSense in any widget area
+1. Create ad groups. This allows you to have groups specific to links, banners, skyscrapers, etc.
+2. Define a custom shortcode for inserting each group in to the content.
+3. Auto insert GARD into user specified content types.
+4. Select which group to auto insert, or let it be random.
+5. Select which paragraphs your ads are inserted after, or let them appear randomly through your content.
+6. A responsive widget for each ad group, with the option to show to everyone, or guests only.
+7. Clone ad groups for easier setup.
+8. Disable output of ads on pages with certain keywords.
+9. Disable output of ads when the referring website is on a list of websites you specify.
+10. Disable output of ads when the visitors IP address is on a user definable list.
+11. Specify default alignment of ads: Float Left, Float Right, Centered or None. 
+12. You may also select to position the ads randomly from the choices above.
 
 = Can I use my own shortcode instead of the shortcode [GARD]? =
 Yes. Enter your custom shortcode in the settings page. If you want to disable [GARD] and use only your shortcode, check the box "Only Allow Custom Shortcode".
