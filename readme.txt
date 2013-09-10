@@ -73,7 +73,7 @@ Yes, with [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSe
 
 GARD (What you're looking at now)  
 [GARD Pro](http://thedigitalhippies.com/gardpro "GARD Pro: Google AdSense for Responsive Design Pro") (Offers many additional features to extend GARD)  
-* GARD Pro costs $39.95, and is appropriate if you expect to make more than $39.95 in ad revenue from your site. :P
+* GARD Pro costs $34.95, and is appropriate if you expect to make more than $34.95 in ad revenue from your site. :P
 
 = GARD Pro FAQ =
 
