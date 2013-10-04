@@ -1,4 +1,4 @@
-=== Google AdSense for Responsive Design - GARD ===
+﻿=== Google AdSense for Responsive Design - GARD ===
 Contributors: The Digital Hippies, The Plugin Factory
 Donate link: http://thedigitalhippies.com/garddonate
 Tags: responsive, AdSense, responsive AdSense, Google AdSense, responsive ads, responsive design, responsive design, gard, advertising, ads, The Plugin Factory
@@ -136,6 +136,9 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 
 == Changelog ==
 
+= 2.0.1 =
+* [FIX] Quick fix due to bad foreach loop.  
+
 = 2.0 =
 * [NEW FEATURE] BASIC and ADVANCED Setup modes. Basic mode allows for super simple setup.
 * [NEW FEATURE] Remove yellow background from AdSense place holders.
@@ -169,6 +172,9 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 * Initial release.
 
 == Upgrade Notice ==
+
+= 2.0.1 =
+* [FIX] Quick fix due to bad foreach loop.  
 
 = 2.0 =
 * [NEW FEATURE] BASIC and ADVANCED Setup modes. Basic mode allows for super simple setup.
