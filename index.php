@@ -3,12 +3,26 @@
     Plugin Name: Google Adsense for Responsive Design - GARD
 	Plugin URI: http://thedigitalhippies.com/gard
 	Description: Allows you to use shortcode to display responsive adsense ads throughout your responsive theme.
-	Version: 2.0.1
+	Version: 2.0.2
 	Author: The Digital Hippies
 	Author URI: http://thedigitalhippies.com
 */
 
-if( is_admin() ) {
+
+if (!function_exists('wp_get_current_user') ) {
+	include_once( ABSPATH . '/wp-includes/pluggable.php' );
+}
+
+function GARD_PERMISSION_CHECK() {
+	if (!current_user_can('manage_options')) {
+		return FALSE;
+		//wp_die( __('You do not have sufficient permissions to access this page.') );
+	} else {
+		return TRUE;
+	}
+}
+
+if( is_admin() && GARD_PERMISSION_CHECK() ) {
 	
 	include('adsizes.php');
 
@@ -20,34 +34,24 @@ if( is_admin() ) {
 	define('GARD_PLUGIN_SUPPORT_URL', 'http://thepluginfactory.co/community/forum/plugin-specific/gard-google-adsense-for-responsive-design/');
 	define('GARD_PLUGIN_SUPPORT_LINK', '<a href="http://thepluginfactory.co/community/forum/plugin-specific/gard-google-adsense-for-responsive-design/" title="GARD Support Forum" target="_blank">GARD Support Forum</a>');
 
-	function GARD_PERMISSION_CHECK() {
-		if (!current_user_can('manage_options')) {
-			wp_die( __('You do not have sufficient permissions to access this page.') );
-		}		
-	}
 
 	function gard_register() {
-
 		include(dirname(__FILE__) . '/register.php');
 	}	
 
 	function gard_options_page() { 
-		GARD_PERMISSION_CHECK();
 		include(dirname(__FILE__) . '/options.php');
 	}
 
 	function gard_menu() {
-		GARD_PERMISSION_CHECK();
 		include(dirname(__FILE__) . '/menu.php');
 	}
 
 	function gard_help()  { 
-		GARD_PERMISSION_CHECK();
 		include(dirname(__FILE__) . '/help.php');
 	}
 
 	function gard_pro_settings() {
-		GARD_PERMISSION_CHECK();
 		include(dirname(__FILE__) . '/pro.php');
 	}
 
@@ -60,7 +64,7 @@ if( is_admin() ) {
 
 		wp_enqueue_script(  'jquery' );
 	}
-	
+
 	add_action( 'admin_init','gard_register');
 	add_action( 'admin_menu', 'gard_menu' );
 	add_action( 'admin_init', 'GARD_ENQUEUE' );

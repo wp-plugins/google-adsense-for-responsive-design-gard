@@ -136,6 +136,9 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 
 == Changelog ==
 
+= 2.0.2 =
+* [FIX] Permissions issue on some themes.
+
 = 2.0.1 =
 * [FIX] Quick fix due to bad foreach loop.  
 
@@ -172,6 +175,9 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 * Initial release.
 
 == Upgrade Notice ==
+
+= 2.0.2 =
+* [FIX] Permissions issue on some themes.
 
 = 2.0.1 =
 * [FIX] Quick fix due to bad foreach loop.  
