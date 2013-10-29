@@ -1,6 +1,6 @@
 <h1><a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'>GET GARD PRO TODAY</a></h1>
-<a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a><br>
-<a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 60 SECOND COMMERCIAL'><b>WATCH 60 SECOND COMMERCIAL</b></a><br>
+<a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a><br><br>
+<a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 73 SECOND COMMERCIAL'><b>WATCH 60 SECOND COMMERCIAL</b></a><br>
 <br>
 
 <h3>100% MONEY BACK GUARANTEE</h3>
