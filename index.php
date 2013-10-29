@@ -3,8 +3,8 @@
     Plugin Name: Google Adsense for Responsive Design - GARD
 	Plugin URI: http://thedigitalhippies.com/gard
 	Description: Allows you to use shortcode to display responsive adsense ads throughout your responsive theme.
-	Version: 2.0.2
-	Author: The Digital Hippies
+	Version: 2.0.3
+	Author: The Digital Hippies, The Plugin Factory
 	Author URI: http://thedigitalhippies.com
 */
 
