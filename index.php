@@ -90,7 +90,7 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 
 
 		if($align == 'center') {
-			$align = 'margin: 0 auto;float: none;display: block;text-align:center';
+			$align = 'margin: 0 auto;float: none;display: block;text-align:center;';
 			$float = 'none';
 			$margin = '0 auto';
 			$display = 'block';

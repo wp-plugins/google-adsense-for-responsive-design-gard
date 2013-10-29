@@ -136,6 +136,9 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 
 == Changelog ==
 
+= 2.0.3 =
+* [FIX] Missing semi colon in async code causing ad blocks to be the wrong size.
+
 = 2.0.2 =
 * [FIX] Permissions issue on some themes.
 
