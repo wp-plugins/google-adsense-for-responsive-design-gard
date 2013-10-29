@@ -1,6 +1,6 @@
 <h1><a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'>GET GARD PRO TODAY</a></h1>
-<a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a><br><br>
-<a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 73 SECOND COMMERCIAL'><b>WATCH 60 SECOND COMMERCIAL</b></a><br>
+<a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a> | 
+<a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 72 SECOND COMMERCIAL'><b>WATCH 72 SECOND COMMERCIAL</b></a><br>
 <br>
 
 <h3>100% MONEY BACK GUARANTEE</h3>
@@ -15,7 +15,8 @@ Anytime we have an upgraded version of GARD Pro available, you’ll get it free!
 <h3>5 AD WIDGETS INCLUDED</h3>
 GARD Pro includes 5 custom ad widgets! One for each custom group. You can have a widget for responsive banners, one for responsive skyscrapers, one for responsive squares, one for responsive rectangles, and one for link units.<br>
 
-<br><a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a><br>
+<br><a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a> | 
+<a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 72 SECOND COMMERCIAL'><b>WATCH 72 SECOND COMMERCIAL</b></a><br>
 
 <h3>ADSENSE POLICY COMPLIANT</h3>
 GARD Pro enforces Google AdSense policies. We limit image ads to 3 per page, text ads to 3 per page, and 300×600 ads to one per page. Never worry about being banned for misuse of AdSense!<br>
@@ -29,7 +30,8 @@ Define a custom shortcode for inserting each group into the content.<br>
 <h3>AUTO INSERT</h3>
 Auto insert responsive AdSense ads into user specified content types.<br>
 
-<br><a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a><br>
+<br><a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a> | 
+<a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 72 SECOND COMMERCIAL'><b>WATCH 72 SECOND COMMERCIAL</b></a><br>
 
 <h3>MAGIC TOOL INCLUDED</h3>
 With our Magic tool, you can simply paste your current AdSense code, and click a single button to insert it into the GARD Pro settings page.<br>
@@ -43,7 +45,8 @@ Every ad group has the ability to be cloned for ease of setup. Set up all your a
 <h3>FILTER OUT BAD THINGS</h3>
 Have an article on gambling that you don’t want ads on? No problem. What about a website linking to you that you don’t want to show ads to the visitors of? Piece of cake. Want to block ads to your work and home computers? Easy peasy.<br>
 
-<br><a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a><br>
+<br><a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a> | 
+<a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 72 SECOND COMMERCIAL'><b>WATCH 72 SECOND COMMERCIAL</b></a><br>
 
 <h3>SUGGESTED SIZES</h3>
 We label ad sizes which are best for certain areas, such as your sidebar, or header. If you use the Basic Group Settings mode, then all you have to do is check the boxes next to the size you want!<br>
@@ -54,4 +57,5 @@ With GARD Pro, you can easily set up AdSense that fits every screen size possibl
 <h3>ANYTIME UPGRADE</h3>
 You can upgrade anytime with NO PENALTY. Just post in our support forums letting us know that you want to upgrade your license. We’ll send you a coupon good for the purchase price of your initial purchase. You can use this discount towards any package above the level you previously purchased.<br>
 
-<br><a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a><br>
+<br><a href='<?php echo GARD_PRO_LINK ?>' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a> | 
+<a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 72 SECOND COMMERCIAL'><b>WATCH 72 SECOND COMMERCIAL</b></a><br>

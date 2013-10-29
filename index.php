@@ -4,7 +4,7 @@
 	Plugin URI: http://thedigitalhippies.com/gard
 	Description: Allows you to use shortcode to display responsive adsense ads throughout your responsive theme.
 	Version: 2.0.3
-	Author: The Digital Hippies, The Plugin Factory
+	Author: The Plugin Factory,The Digital Hippies
 	Author URI: http://thedigitalhippies.com
 */
 
