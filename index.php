@@ -3,7 +3,7 @@
     Plugin Name: Google Adsense for Responsive Design - GARD
 	Plugin URI: http://thedigitalhippies.com/gard
 	Description: Allows you to use shortcode to display responsive adsense ads throughout your responsive theme.
-	Version: 2.0.3
+	Version: 2.0.4
 	Author: The Plugin Factory,The Digital Hippies
 	Author URI: http://thedigitalhippies.com
 */
@@ -26,7 +26,7 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 	
 	include('adsizes.php');
 
-	define('GARDPLUGINOPTIONS_VER', '2.0');
+	define('GARDPLUGINOPTIONS_VER', '2.0.4');
 	define('GARDPLUGINOPTIONS_ID', 'GARD-plugin-options');
 	define('GARDPLUGINOPTIONS_NICK', 'Google Adsense for Responsive Design');
 	define('GARD_FOLDER', dirname(__FILE__) );
@@ -136,7 +136,7 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 
 
 				$adsense =	'		
-					<div class="GARD gard_advanced_mode" id="google-ads-'.$num.'"><script data-cfasync="false">
+					<div class="GARD gard_advanced_mode" id="google-ads-'.$num.'"><script>
 					adUnit = document.getElementById("google-ads-'.$num.'");
 					google_ad_client = "'.$id.'";
 					adUnit = document.getElementById("google-ads-'.$num.'");
@@ -186,17 +186,14 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 							google_ad_slot = "'.$code.'";
 							google_ad_width = '.$size1.';
 							google_ad_height = '.$size2.';
-
 							adUnit.style.cssFloat  = "'.$float.'";
 							adUnit.style.styleFloat  = "'.$float.'";
 							adUnit.style.margin = "'.$margin.'";
 							adUnit.style.textAlign = "'.$text.'";
-
 							adcount = document.querySelectorAll(".'.$type.'").length;
 							tag = "'.$tag.'_"+adcount;
 							adUnit.className = adUnit.className + " '.$type.' " + tag;
 						}
-
 					}';
 						}
 					}
@@ -205,24 +202,16 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 						google_ad_slot	 = "0";
 						adUnit.style.display = "none";
 					}</script>
-					<script data-cfasync="false" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>';
+					<script src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script></div>';
 
 			} else if (  $mode == 1 && $async_mode == 1  ) {
 
 		# ASYNC MODE
 
-				$adsense = '
-				<div class="GARD gard_async_mode" id="google-ads-'.$num.'" >
-					<script data-cfasync="false" async="async" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<div id="GARDasync_'.$num.'"></div>
-					<script data-cfasync="false">
-					(adsbygoogle = window.adsbygoogle || []).push({});
-					</script>
-				</div>';
+				$adsense = '<div class="GARD gard_async_mode" id="google-ads-'.$num.'" ><script async="async" src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><div id="GARDasync_'.$num.'"></div><script >(adsbygoogle = window.adsbygoogle || []).push({});</script></div>';
 
 				# determine size and insert correct ad.
-				$adsense .=	'		
-					<script data-cfasync="false">
+				$adsense .=	'<script>
 						adUnit = document.getElementById("google-ads-'.$num.'");
 						adWidth = adUnit.offsetWidth;		
 						if ( adWidth >= 999999 ) {
@@ -250,8 +239,7 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 									}';
 							}
 						}
-				$adsense .= '
-				</script>';
+				$adsense .= '</script>';
 
 			} else {
 
@@ -285,7 +273,7 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 
 				if ($google_ad_type == 'link') {
 					$format_extension = '_0ads_al';
-					$google_ad_type = '';
+					$google_ad_type = 'google_ad_type = "";';
 				} else {
 					$google_ad_type = 'google_ad_type = "text";';
 					// $google_ad_type = 'google_ad_type = "'.$google_ad_type.'";';
@@ -293,7 +281,7 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 					
 
 				$adsense =	'		
-					<div class="GARD gard_basic_mode" id="google-ads-'.$num.'"><script data-cfasync="false">
+					<div class="GARD gard_basic_mode" id="google-ads-'.$num.'"><script >
 					adUnit = document.getElementById("google-ads-'.$num.'");
 					adWidth = adUnit.offsetWidth;	
 
@@ -333,7 +321,6 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 						if (document.querySelectorAll(".'.$type.'").length > 2 ) {
 							google_ad_slot	 = "0";
 							adUnit.style.display = "none";
-						//	alert("There are already 3 '.$type.' ads on this page.");
 						} else {
 							adcount = document.querySelectorAll(".'.$type.'").length;
 							tag = "'.$tag.'_"+adcount;
@@ -351,16 +338,12 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 					google_ad_slot	 = "0";
 					adUnit.style.display = "none";
 				}
-
 				adUnit.className = adUnit.className + " '.$type.' " + tag;
-
 				google_ad_client = "'.$id.'";
-
 				adUnit.style.cssFloat  = "'.$float.'";
 				adUnit.style.styleFloat  = "'.$float.'";
 				adUnit.style.margin = "'.$margin.'";
 				adUnit.style.textAlign = "'.$text.'";
-
 				google_color_border = "'.$google_color_border.'";
 				google_color_bg = "'.$google_color_bg.'";
 				google_color_link = "'.$google_color_link.'";
@@ -368,7 +351,7 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 				google_color_text = "'.$google_color_text.'";
 				google_ui_features = "rc:'.$google_ui_features.'";
 				</script>
-				<script data-cfasync="false" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+				<script  src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
 				</div>';
 
 			}
