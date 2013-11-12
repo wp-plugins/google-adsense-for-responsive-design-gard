@@ -136,6 +136,13 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 
 == Changelog ==
 
+= 2.0.5 =
+* [UPDATE] Fixed styling of BASIC mode notice message.
+* [ADDED] Coupon code for GARD Pro
+
+= 2.0.4 =
+* Internal update, no official release.
+
 = 2.0.3 =
 * [FIX] Missing semi colon in async code causing ad blocks to be the wrong size.
 
