@@ -224,16 +224,16 @@ $GARD_CSS = get_option('GARD_CSS');
 				 </tr>
 
 				   <tr>
-					 <td style="vertical-align:middle;">
+					 <td style="vertical-align:top;">
 						 <label for="GARD_ADVANCED_MODE">
 							 AdSense Setup Mode:
 						 </label>
 					 </td>
-					 <td style="vertical-align:middle;text-align:right;min-width:265px;">
+					 <td style="vertical-align:top;text-align:right;min-width:265px;">
 						<input type="button" name="submit" id="basic_mode" value="BASIC MODE" class="button-<?php echo $basic ?>" /> 
 						<input type="button" name="submit" id="advanced_mode" value="ADVANCED MODE" class="button-<?php echo $advanced ?>" />
 						<input type="checkbox" name="GARD_ADVANCED_MODE" id="GARD_ADVANCED_MODE" value="1" <?php echo $GARD_ADVANCED ?> hidden />
-						<div class="group_basic" style="width:222px;text-align:justify;margin-left: 42px;">
+						<div class="group_basic" style="width:222px;text-align:justify;margin: 10px 0 10px 42px;">
 							<b style="color:red;">NOTICE PLEASE READ</b>: Basic mode is for users who don\'t care about ad tracking. Basic mode makes it super simple to set up any ad configuration that you want. The only drawback to basic mode is that you can not track your ad performance.
 						</div>
 					 </td>
@@ -581,7 +581,7 @@ $GARD_CSS = get_option('GARD_CSS');
 				$('#basic_mode').addClass('button-secondary');
 
 				$('.group_basic').hide();
-				$('.group_advanced').show();
+				$('.group_advanced').fadeIn( "slow" );
 			});
 			
 			$('#basic_mode').click(function(){
@@ -594,7 +594,7 @@ $GARD_CSS = get_option('GARD_CSS');
 				$('#advanced_mode').addClass('button-secondary');
 
 				$('.group_advanced').hide();
-				$('.group_basic').show();
+				$('.group_basic').fadeIn( "slow" );
 			});
 
 

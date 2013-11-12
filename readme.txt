@@ -4,7 +4,7 @@ Donate link: http://thedigitalhippies.com/garddonate
 Tags: responsive, AdSense, responsive AdSense, Google AdSense, responsive ads, responsive design, responsive design, gard, advertising, ads, The Plugin Factory
 Requires at least: 3.0.1
 Tested up to: 3.5.1
-Stable tag: 3.5.1
+Stable tag: 2.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
