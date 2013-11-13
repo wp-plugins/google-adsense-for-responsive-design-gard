@@ -30,7 +30,7 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 	define('GARDPLUGINOPTIONS_ID', 'GARD-plugin-options');
 	define('GARDPLUGINOPTIONS_NICK', 'Google Adsense for Responsive Design');
 	define('GARD_FOLDER', dirname(__FILE__) );
-	define('GARD_PRO_LINK', 'http://thepluginfactory.co/warehouse/gard-pro');
+	define('GARD_PRO_LINK', 'http://thepluginfactory.co/warehouse/gard-pro/');
 	define('GARD_PLUGIN_SUPPORT_URL', 'http://thepluginfactory.co/community/forum/plugin-specific/gard-google-adsense-for-responsive-design/');
 	define('GARD_PLUGIN_SUPPORT_LINK', '<a href="http://thepluginfactory.co/community/forum/plugin-specific/gard-google-adsense-for-responsive-design/" title="GARD Support Forum" target="_blank">GARD Support Forum</a>');
 
