@@ -85,9 +85,7 @@ if(strlen(get_option('GARD_ID')) <= 0) {
 							Videos:
 						</td>
 						<td style="vertical-align:middle;">
-							<a href="https://www.youtube.com/watch?v=occtczPSx1g" target="_blank">Google AdSense for Responsive Design - GARD Overview</a><br/>
-							<a href="https://www.youtube.com/watch?v=BXV1RZrgkBQ" target="_blank">GARD Pro WordPress Plugin Version 1.0 Overview</a><br/>
-							<a href="https://www.youtube.com/watch?v=_Ub3PqpLgf4" target="_blank">GARD Pro WordPress Plugin Version 1.0 Troubleshooting</a><br/>
+							<a href="https://www.youtube.com/watch?v=occtczPSx1g" target="_blank">Google AdSense for Responsive Design - GARD Overview</a><br/><br/>
 							<form method="post" id="<?php echo $plugin_id; ?>
 								_options_form" name="<?php echo $plugin_id; ?>
 								_options_form" class="help_page"> <?php settings_fields($plugin_id.'_options'); ?>

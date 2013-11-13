@@ -5,6 +5,7 @@ $adsizes = array(
 		'728x90'  => 'Leaderboard',
 		'468x60'  => 'Banner ',
 		'336x280' => 'Large Rectangle',
+		'300x600' => 'Large Skyscraper',
 		'300x250' => 'Medium Rectangle',
 		'320x50'  => 'Mobile Banner',
 		'250x250' => 'Square ',
