@@ -24,6 +24,6 @@ $adsizes = array(
 		'180x90'  => 'Displays 3 links',
 		'200x90'  => 'Displays 3 links',
 		'468x15'  => 'Displays 4 links',
-		'728x15'  => 'Displays 4 links',
+		'728x15'  => 'Displays 4 links'
 
 );

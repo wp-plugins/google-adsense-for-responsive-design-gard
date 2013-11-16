@@ -3,7 +3,7 @@
 <a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 72 SECOND COMMERCIAL'><b>WATCH 72 SECOND COMMERCIAL</b></a><br>
 <br>
 
-<?
+<?php
 
 date_default_timezone_set('America/Los_Angeles');
 
@@ -28,7 +28,7 @@ if ($now >= $blackfriday_start && $now <= $blackfriday_stop) {
 		Cyber Monday to receive 40% off of <a href='<?php echo GARD_PRO_LINK ?>?so=gard_black_friday' target='_blank' title='GARD Pro Official Website'><b>GARD Pro</b></a>.<br>
 		Valid dates: November 29, 2013 through December 2, 2013
 		<br>
-	<?
+	<?php
 } elseif ($now >= $christmas_start && $now <= $christmas_stop) {
 	?>
 	<h3 style="color:green;margin:0;">CHRISTMAS EVE / CHRISTMAS DAY</h3>
@@ -36,7 +36,7 @@ if ($now >= $blackfriday_start && $now <= $blackfriday_stop) {
 		Christmas Day to receive 40% off of <a href='<?php echo GARD_PRO_LINK ?>?so=gard_christmas' target='_blank' title='GARD Pro Official Website'><b>GARD Pro</b></a>.<br>
 		Valid dates: December 24, 2013 and December 25, 2013
 		<br>
-	<?
+	<?php
 }
 
 ?>

@@ -100,7 +100,7 @@ if(strlen(get_option('GARD_ID')) <= 0) {
 		</div>
 	</div>
 	<?php
-if($permission) { ?>
+if( isset($permission) && $permission ) { ?>
 	<div style="border: 1px solid gray;width:800px;margin: 15px 0 10px 0;">
 		<span style="width:800px;text-align:center;display: block;font-weight: bold;font-size: 13px;background: lightblue;padding: 20px 0;">
 		<h2>Google AdSense for Responsive Design - GARD Overview</h2>
@@ -131,7 +131,7 @@ if($permission) { ?>
 		<span style="width:800px;text-align:center;display: block;font-weight: bold;font-size: 13px;background: lightblue;padding: 20px 0;margin-top: -4px;">This video covers troubleshooting. You will find out what to do if your ads don't resize properly, and which plugin might be causing it.</span>
 	</div>
 	<br/>
-	<?
+	<?php
 } ?>
 	
 </div>

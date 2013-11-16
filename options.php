@@ -1,11 +1,11 @@
 <style type="text/css">
-	#GARD_WINDOW {display: none;}
+
 	/* .hiddenfields {display:none;} REMOVED ABILITY TO HIDE AD SIZES */
 	<?php 
 		if( get_option('GARD_ADVANCED_MODE') == 1 ) {} else {
 			?>
 				.advanced {display:none;}
-			<?
+			<?php
 		}
 	?>
 	.smallgray {
@@ -150,7 +150,7 @@ if(get_option('GARD_ADVANCED_MODE', '1') == 1) {
 	<style type="text/css">
 		.group_basic {display:none;}
 	</style>
-	<?
+	<?php
 } else {
 	$advanced = "secondary";
 	$basic = "primary";
@@ -159,7 +159,7 @@ if(get_option('GARD_ADVANCED_MODE', '1') == 1) {
 		<style type="text/css">
 		.group_advanced {display:none;}
 	</style>
-	<?
+	<?php
 }
 $GARD_YELLOW = '';
 if(get_option('GARD_YELLOW') == 1) {
@@ -277,7 +277,9 @@ $GARD_CSS = get_option('GARD_CSS');
 										<td>Text</td>
 										<td>URL</td>
 									</tr>
-									<tr>
+									<tr>";
+/*
+			echo "	
 										<td>
 											<select name='GARD_AD_TYPE' >
 												<option ".$ad_text_image." value='text_image'>Text/Image</option>
@@ -285,16 +287,19 @@ $GARD_CSS = get_option('GARD_CSS');
 												<option ".$ad_text." value='text'>Text</option>
 												<option ".$ad_link." value='link'>Links</option>
 											</select>";
-/*
 			echo "							<br>
 											Rounded Corners<br>
 											<select id='ad_radius' name='GARD_AD_RADIUS' >
 												<option ".$square." value='0'>Square</option>
 												<option ".$slightly." value='6'>Slightly Rounded</option>
 												<option ".$rounded." value='10'>Very Rounded</option>
-											</select>";
+											</select>
+										</td>";
 */
-			echo "							</td>
+			if (empty($radius)) {
+				$radius = '0';
+			}
+			echo "							
 										<td><input type='text' id='ad_border' value='". $border ."' name='GARD_AD_BORDER'/></td>
 										<td><input type='text' id='ad_title' value='". $title ."' name='GARD_AD_TITLE'/></td>
 										<td><input type='text' id='ad_background' value='". $background ."' name='GARD_AD_BACKGROUND'/></td>
@@ -394,8 +399,8 @@ $GARD_CSS = get_option('GARD_CSS');
 				}
 
 				$output .= '
-							<tr class="group_basic" '.$highlight.' '.$hidden.'>
-								<td style="vertical-align:middle;'.$fade.'" >
+							<tr class="group_basic">
+								<td style="vertical-align:middle;" >
 									<label for="GARD_'.$size.'_BASIC">
 										<span style="width:50px;display:inline-block;">'.$size.'</span> | <b>'.$key.'</b>'.$suggested.'
 									</label>
@@ -466,7 +471,7 @@ $GARD_CSS = get_option('GARD_CSS');
 				} elseif ($vallen == "0") {
 					$highlight = '';
 					$fade = "color:#AAA;"; 
-					$hidden = "class='hideoptions hideoptions$group hiddenfields hiddenfields$group'";
+					$hidden = "class='hideoptions hiddenfields'";
 				} else {
 					$highlight = '';
 					$fade = '';
@@ -507,12 +512,12 @@ $GARD_CSS = get_option('GARD_CSS');
 					$output .= '<br><input type="checkbox" name="GARD_MOBILE_ADVANCED" value="1" '.$GARD_MOBILE_ADVANCED.'> Show to mobile only.';
 				}
 
-				if ($error == "count") {
+				if (isset($error) && $error == "count") {
 					$output .= '<br/><b>Invalid number of digits.</b><br/>
 					<span style="font-size:11px;">Ad slot code should be 10 digits.<br/>
 					Your code contains <b>'.$vallen.'</b> digits.</span>';
 				} 
-				if ($error == "numeric") {
+				if (isset($error) && $error == "numeric") {
 					$output .= '<br/><b>Invalid characters.</b><br/>
 					<span style="font-size:11px;">Ad slot code should be 10 digits only.';
 			   }
@@ -544,7 +549,7 @@ $GARD_CSS = get_option('GARD_CSS');
 	</form>	
 </div>
 
-<?
+<?php
 	$border = get_option( 'GARD_AD_BORDER', '#FFFFFF' ) ; 
 	if ($border == '') { 
 		$border = '#FFFFFF'; 
