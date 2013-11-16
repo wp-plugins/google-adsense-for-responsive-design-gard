@@ -1,5 +1,5 @@
 ﻿=== Google AdSense for Responsive Design - GARD ===
-Contributors: The Digital Hippies, The Plugin Factory
+Contributors: The Plugin Factory
 Donate link: http://thedigitalhippies.com/garddonate
 Tags: responsive, AdSense, responsive AdSense, Google AdSense, responsive ads, responsive design, responsive design, gard, advertising, ads, The Plugin Factory
 Requires at least: 3.0.1
