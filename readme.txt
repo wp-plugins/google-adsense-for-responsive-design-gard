@@ -4,7 +4,7 @@ Donate link: http://thedigitalhippies.com/garddonate
 Tags: responsive, AdSense, responsive AdSense, Google AdSense, responsive ads, responsive design, responsive design, gard, advertising, ads, The Plugin Factory
 Requires at least: 3.0.1
 Tested up to: 3.5.1
-Stable tag: 2.0.8
+Stable tag: 2.0.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -136,6 +136,9 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 
 == Changelog ==
 
+= 2.0.9 =
+* [FIXED] Mobile size wasn't showing properly.
+
 = 2.0.8 =
 * [FIXED] Returning ads at the top of the page rather than where they belong in the content.
 
@@ -194,6 +197,9 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 * Initial release.
 
 == Upgrade Notice ==
+
+= 2.0.9 =
+* [FIXED] Mobile size wasn't showing properly.
 
 = 2.0.8 =
 * [FIXED] Returning ads at the top of the page rather than where they belong in the content.

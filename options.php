@@ -1,6 +1,5 @@
 <style type="text/css">
 
-	/* .hiddenfields {display:none;} REMOVED ABILITY TO HIDE AD SIZES */
 	<?php 
 		if( get_option('GARD_ADVANCED_MODE') == 1 ) {} else {
 			?>
@@ -110,8 +109,6 @@ wp_enqueue_script('jquery');
 wp_enqueue_script("jquery-effects-core");
 
 $pluginurl = plugin_dir_url(__FILE__);
-
-
 
 # WRITE CSS FILES
 				
