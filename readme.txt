@@ -102,6 +102,10 @@ Support: [GARD Official WordPress Plugin Support Forum](http://thepluginfactory.
 
 Yes.
 
+= Will this work on my Multi User (MU) installation? =
+
+This has not been tested in a MU environment. We have reports of it crashing MU websites, so I would only test on a non live website.
+
 = Can I make my ads align left or right? =
 
 Yes. If you would like your ads to align left, use the shortcode [GARD align="left"]. The same is true for center and right.  
