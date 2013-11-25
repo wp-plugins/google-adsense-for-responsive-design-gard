@@ -24,22 +24,23 @@ $christmas_stop = $christmas_date + 84600;
 if ($now >= $blackfriday_start && $now <= $blackfriday_stop) {
 	?>
 	<h3 style="color:red;margin:0;">BLACK FRIDAY / CYBER MONDAY SALE</h3>
-		Use discount code <b><pre style="font-size:14px;display:initial;color:black;">GP40BF</pre></b> anytime between Black Friday and<br>
-		Cyber Monday to receive 40% off of <a href='<?php echo GARD_PRO_LINK ?>?so=gard_black_friday' target='_blank' title='GARD Pro Official Website'><b>GARD Pro</b></a>.<br>
+		Use discount code <b><pre style="font-size:14px;display:initial;color:black;">GP40BF</pre></b> anytime between Black Friday and Cyber Monday to receive 40% off of <a href='<?php echo GARD_PRO_LINK ?>?so=gard_black_friday' target='_blank' title='GARD Pro Official Website'><b>GARD Pro</b></a>.<br>
 		Valid dates: November 29, 2013 through December 2, 2013
 		<br>
 	<?php
 } elseif ($now >= $christmas_start && $now <= $christmas_stop) {
 	?>
 	<h3 style="color:green;margin:0;">CHRISTMAS EVE / CHRISTMAS DAY</h3>
-		Use discount code <b><pre style="font-size:14px;display:initial;color:black;">GP40CH</pre></b> on Christmas Eve or<br>
-		Christmas Day to receive 40% off of <a href='<?php echo GARD_PRO_LINK ?>?so=gard_christmas' target='_blank' title='GARD Pro Official Website'><b>GARD Pro</b></a>.<br>
+		Use discount code <b><pre style="font-size:14px;display:initial;color:black;">GP40CH</pre></b> on Christmas Eve or Christmas Day to receive 40% off of <a href='<?php echo GARD_PRO_LINK ?>?so=gard_christmas' target='_blank' title='GARD Pro Official Website'><b>GARD Pro</b></a>.<br>
 		Valid dates: December 24, 2013 and December 25, 2013
 		<br>
 	<?php
 }
 
 ?>
+<a href="http://thepluginfactory.co/checkout/?edd_action=add_to_cart&amp;download_id=47&amp;so=gard_belcher" target='_blank'>
+	<img src="<?php echo plugin_dir_url(__FILE__) ?>images/gp1.png" style="width:100%" >
+</a>
 
 <h3>100% MONEY BACK GUARANTEE</h3>
 180 day money back guarantee! If at anytime in the first 180 days after your purchase of GARD Pro, you decide that you want a refund, just ask! No questions asked, 100% money back guarantee. We want you to be satisfied, with our product. If you want features added, please ask!

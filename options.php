@@ -267,7 +267,7 @@ $GARD_CSS = get_option('GARD_CSS');
 						 <td style='vertical-align:top;min-width:255px;' colspan='2'>
 								 <table id='adoptions'>
 									<tr>
-										<td>Ad Type</td>
+										<td style='display:none'>Ad Type</td>
 										<td>Border</td>
 										<td>Title</td>
 										<td>Background</td>
