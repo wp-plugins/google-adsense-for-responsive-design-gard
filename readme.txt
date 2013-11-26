@@ -140,6 +140,9 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 
 == Changelog ==
 
+= 2.0.11 =
+* [REMOVED] Unused javascript from package
+
 = 2.0.10 =
 * [UPDATE] Removed heading for link unit type on options page.
 * [ADDED] Buy now button in sidebar.
@@ -205,6 +208,9 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 * Initial release.
 
 == Upgrade Notice ==
+
+= 2.0.11 =
+* [REMOVED] Unused javascript from package
 
 = 2.0.10 =
 * [UPDATE] Removed heading for link unit type on options page.
