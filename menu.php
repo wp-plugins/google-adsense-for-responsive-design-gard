@@ -20,8 +20,8 @@
 
     // PRO PAGE
 		$parent_slug = 'gard';
-		$page_title = 'GARD Pro';
-		$menu_title = 'GARD Pro';
+		$page_title = 'GARD Pro Demo';
+		$menu_title = 'GARD Pro Demo';
 		$capability = 'manage_options';
 		$menu_slug = 'gard-pro-info';
 		$function  = 'gard_pro_settings' ;

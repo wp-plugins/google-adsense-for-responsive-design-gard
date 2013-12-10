@@ -38,9 +38,11 @@ if ($now >= $blackfriday_start && $now <= $blackfriday_stop) {
 }
 
 ?>
-<a href="http://thepluginfactory.co/checkout/?edd_action=add_to_cart&amp;download_id=47&amp;so=gard_belcher" target='_blank'>
+<a href="http://thepluginfactory.co/warehouse/gard-pro/?so=gard_belcher" target='_blank'>
 	<img src="<?php echo plugin_dir_url(__FILE__) ?>images/gp1.png" style="width:100%" >
 </a>
+
+<h2><a href="admin.php?page=gard-pro-info" style='font-size: 19px;font-weight: bold;'>Now Try GARD Pro for FREE!</a></h2>
 
 <h3>100% MONEY BACK GUARANTEE</h3>
 180 day money back guarantee! If at anytime in the first 180 days after your purchase of GARD Pro, you decide that you want a refund, just ask! No questions asked, 100% money back guarantee. We want you to be satisfied, with our product. If you want features added, please ask!

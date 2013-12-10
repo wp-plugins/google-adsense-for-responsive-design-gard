@@ -96,7 +96,7 @@
 		*/
 		margin-bottom: 7px;
 	}
-	.hiddenfields, .hidechild {display:none;}
+	.hiddenfields, .hidechild, .hidden {display:none !important;}
 	.smallgray {
 		font-size: 12px;
 		color: #757575;
@@ -181,7 +181,7 @@ $GARD_CSS = get_option('GARD_CSS');
 			<table class="widefat">
 				<thead>
 				   <tr>
-					 <th colspan="2"><input type="submit" name="submit" value="Save Settings" class="button-primary" /><a href="<?php echo GARD_PLUGIN_SUPPORT_URL; ?>" style="float:right;font-family: arial;font-weight: bold;margin-top: 5px;color: #d54e21;" target="_blank">GARD SUPPORT FORUM</a></span></th>
+					 <th colspan="2"><input type="submit" name="submit" value="Save Settings" class="button-primary" /><a href="<?php echo GARD_PLUGIN_SUPPORT_URL; ?>" style="float:right;font-family: arial;font-weight: bold;margin-top: 5px;color: #FF0000;" target="_blank">100% FREE GARD SUPPORT FORUM</a></span></th>
 				   </tr>
 				</thead>
 				<tbody>
@@ -229,9 +229,9 @@ $GARD_CSS = get_option('GARD_CSS');
 					 <td style="vertical-align:top;text-align:right;min-width:265px;">
 						<input type="button" name="submit" id="basic_mode" value="BASIC MODE" class="button-<?php echo $basic ?>" /> 
 						<input type="button" name="submit" id="advanced_mode" value="ADVANCED MODE" class="button-<?php echo $advanced ?>" />
-						<input type="checkbox" name="GARD_ADVANCED_MODE" id="GARD_ADVANCED_MODE" value="1" <?php echo $GARD_ADVANCED ?> hidden />
+						<input type="checkbox" name="GARD_ADVANCED_MODE" id="GARD_ADVANCED_MODE" value="1" <?php echo $GARD_ADVANCED ?> class='hidden' />
 						<div class="group_basic" style="width:222px;text-align:justify;margin: 10px 0 10px 42px;">
-							<b style="color:red;">NOTICE PLEASE READ</b>: Basic mode is for users who don\'t care about ad tracking. Basic mode makes it super simple to set up any ad configuration that you want. The only drawback to basic mode is that you can not track your ad performance.
+							<b style="color:red;">NOTICE PLEASE READ</b>: Basic mode is for users who don't care about ad tracking. Basic mode makes it super simple to set up any ad configuration that you want. The only drawback to basic mode is that you can not track your ad performance.
 						</div>
 					 </td>
 				   </tr>
