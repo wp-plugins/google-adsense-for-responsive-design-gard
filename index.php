@@ -26,7 +26,7 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 	
 	include('adsizes.php');
 
-	define('GARDPLUGINOPTIONS_VER', '2.0.1');
+	define('GARDPLUGINOPTIONS_VER', '2.1');
 	define('GARDPLUGINOPTIONS_ID', 'GARD-plugin-options');
 	define('GARDPLUGINOPTIONS_NICK', 'Google Adsense for Responsive Design');
 	define('GARD_FOLDER', dirname(__FILE__) );
