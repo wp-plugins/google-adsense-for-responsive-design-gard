@@ -4,7 +4,7 @@ Donate link: http://thedigitalhippies.com/garddonate
 Tags: responsive, AdSense, responsive AdSense, Google AdSense, responsive ads, responsive design, responsive design, gard, advertising, ads, The Plugin Factory
 Requires at least: 3.0.1
 Tested up to: 3.8
-Stable tag: 2.1
+Stable tag: 2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -127,7 +127,7 @@ We check for three types of ads; link units, ad units, and the 300x600 ad size. 
 
 GARD (What you're looking at now)  
 [GARD Pro](http://thepluginfactory.co/warehouse/gard-pro "GARD Pro") (Offers many additional features to extend GARD)  
-* GARD Pro costs $29.95, and is appropriate if you expect to make more than $29.95 in ad revenue from your site. :P
+* GARD Pro costs $24.95, and is appropriate if you expect to make more than $24.95 in ad revenue from your site. :P
 
 = How do I contact the plugin developer for help? =
 Support is available on [GARD Official WordPress Plugin Support Forum](http://thepluginfactory.co/community/forum/plugin-specific/gard-google-adsense-for-responsive-design/ "GARD Official WordPress Plugin Support Forum").
@@ -139,6 +139,12 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 3. Widget Setup. Enable the GARD widget for all users, or only guests, and give it a title. (widget.png)
 
 == Changelog ==
+
+= 2.2 =
+* [ADDED] Ability to show ads to desktop only.
+* [ADDED] Help for every setting, just click on the setting title to see the help.
+* [ADDED] Bitcoin donate link
+* [FIXED] A few PHP warnings.
 
 = 2.1 =
 * [ADDED] ARD Pro Demo

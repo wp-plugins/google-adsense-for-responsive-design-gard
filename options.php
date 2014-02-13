@@ -108,6 +108,13 @@
 wp_enqueue_script('jquery');
 wp_enqueue_script("jquery-effects-core");
 
+wp_register_style( 'maa-lightbox-style', plugins_url( 'css/popup.css', __FILE__ ) );
+wp_enqueue_style(  'maa-lightbox-style' );
+
+wp_register_script( 'maa-lightbox-js', plugins_url( 'js/popup.js', __FILE__ ) );
+wp_enqueue_script( 'maa-lightbox-js' );
+
+
 $pluginurl = plugin_dir_url(__FILE__);
 
 # WRITE CSS FILES
@@ -149,6 +156,7 @@ if(get_option('GARD_ADVANCED_MODE', '1') == 1) {
 	</style>
 	<?php
 } else {
+	$GARD_ADVANCED = '';
 	$advanced = "secondary";
 	$basic = "primary";
 
@@ -174,22 +182,28 @@ $GARD_CSS = get_option('GARD_CSS');
 	
 	<?php settings_fields(GARDPLUGINOPTIONS_ID.'_options'); ?>
 	
-	<h2>Google Adsense for Responsive Design v<?php echo GARDPLUGINOPTIONS_VER ?> &raquo; Settings</h2>
+	<h2>Google AdSense for Responsive Design v<?php echo GARDPLUGINOPTIONS_VER ?> &raquo; Settings</h2>
 	<table >
 		<tr>
 		<td style="vertical-align:top;">
 			<table class="widefat">
 				<thead>
 				   <tr>
-					 <th colspan="2"><input type="submit" name="submit" value="Save Settings" class="button-primary" /><a href="<?php echo GARD_PLUGIN_SUPPORT_URL; ?>" style="float:right;font-family: arial;font-weight: bold;margin-top: 5px;color: #FF0000;" target="_blank">100% FREE GARD SUPPORT FORUM</a></span></th>
+					 <th colspan="2"><input type="submit" name="submit" value="Save Settings" class="button-primary" /><a href="<?php echo GARD_PLUGIN_SUPPORT_URL; ?>" style="float:right;font-family: arial;font-weight: bold;margin-top: 5px;color: #FF0000;" target="_blank">100% FREE GARD SUPPORT FORUM</a></span>
+					</th>
 				   </tr>
 				</thead>
 				<tbody>
 				   <tr>
 					 <td style="vertical-align:middle;">
 						 <label for="GARD_ID" style="width: 270px; display:block;">
-							 Google Adsense Publisher ID:
+							<a href='#GARD_ID' class='popup-with-zoom-anim'><?php _e('Google AdSense Publisher ID:'); ?></a>
 						 </label>
+						<div class='zoom-anim-dialog mfp-hide help_content' id='GARD_ID'>
+							<h2><?php _e('Google AdSense Publisher ID:'); ?></h2>
+							<p><?php _e('Please use only the numbers from your publisher ID and paste them into the field here.'); ?></p>
+							<p><?php _e('Some publisher ID\'s start with <b>ca-pub-</b> and others just <b>pub-</b> but both will work fine if you remove everything other than the numbers.'); ?></p>
+						</div>
 					 </td>
 					 <td  style="vertical-align:middle;text-align:right;">
 						ca-pub-<input type="text" name="GARD_ID" value="<?php echo get_option('GARD_ID'); ?>" style="padding:5px;" />
@@ -199,8 +213,13 @@ $GARD_CSS = get_option('GARD_CSS');
 				   <tr>
 					 <td style="vertical-align:middle;">
 						 <label for="GARD_YELLOW">
-							 Hide Yellow Background on Placeholder:
+							<a href='#GARD_YELLOW' class='popup-with-zoom-anim'><?php _e('Hide Yellow Background on Placeholder:'); ?></a>
 						 </label>
+						<div class='zoom-anim-dialog mfp-hide help_content' id='GARD_YELLOW'>
+							<h2><?php _e('Hide Yellow Background on Placeholder:'); ?></h2>
+							<p><?php _e('Usually by default, if you have a new account, or Google can\'t find the right size ad for you, they display a box where the ad should go. This box often has a light yellow background.'); ?></p>
+							<p><?php _e('If you prefer to not have a light yellow background on this placeholder box, then check this checkbox.'); ?></p>
+						</div>
 					 </td>
 					 <td style="vertical-align:middle;text-align:right;">
 						<input type="checkbox" name="GARD_YELLOW" id="GARD_YELLOW" value="1" <?php echo $GARD_YELLOW ?> />
@@ -209,11 +228,19 @@ $GARD_CSS = get_option('GARD_CSS');
 
 				<tr>
 					<td style='vertical-align:top;min-width:255px;' colspan='2'>
-						<label for='GARD_CSS'>
-							Custom CSS for GARD:
-						</label><br/><br/>
+						<label for="GARD_CSS">
+							<a href='#GARD_CSS' class='popup-with-zoom-anim'><?php _e('Custom CSS for GARD:'); ?></a>
+						 </label>
+						<div class='zoom-anim-dialog mfp-hide help_content' id='GARD_CSS'>
+							<h2><?php _e('Custom CSS for GARD:'); ?></h2>
+							<p><?php _e('Enter custom CSS styling here for all of your GARD ads.'); ?></p>
+							<p><?php _e('Do not enter any other classes here. Only enter CSS styling as though you were styling inline.'); ?></p>
+							<p><?php _e('Example:'); ?></p>
+							<p><textarea style="width:420px;height:300px;"><?php _e('border: 1px solid #000; float:right;'); ?></textarea></p>
+						</div>
+						<br/><br/>
 						.GARD {<br/>
-						<textarea style='margin-left:20px' name='GARD_CSS' cols='85' rows='10'><?php echo $GARD_CSS; ?></textarea>
+						<textarea style='margin-left:20px;width:90%' name='GARD_CSS'rows='10'><?php echo $GARD_CSS; ?></textarea>
 						<br/>
 						}
 						</td>
@@ -222,14 +249,28 @@ $GARD_CSS = get_option('GARD_CSS');
 
 				   <tr>
 					 <td style="vertical-align:top;">
-						 <label for="GARD_ADVANCED_MODE">
-							 AdSense Setup Mode:
+						<label for="GARD_ADVANCED_MODE">
+							<a href='#GARD_ADVANCED_MODE' class='popup-with-zoom-anim'><?php _e('AdSense Setup Mode:'); ?></a>
 						 </label>
+						<div class='zoom-anim-dialog mfp-hide help_content' id='GARD_ADVANCED_MODE'>
+							<h2><?php _e('AdSense Setup Mode:'); ?></h2>
+							<p><h3><?php _e('Overview'); ?></h3></p>
+							<p><?php _e('The way GARD functions is this: When the page loads, it determines the width of the area for the ad. Then it picks the LARGEST ad from your available ad sizes to display.'); ?></p>
+							<p><?php _e('So, if you only select large ads, but you try to use GARD in a small area, like a widget, then no ads will be displayed.'); ?></p>
+							<p><h3><?php _e('Basic Mode'); ?></h3></p>
+							<p><?php _e('The fastest and easiest way to get going with AdSense is to choose Basic Mode.'); ?></p>
+							<p><?php _e('Basic mode allows you to simply check the boxes next to the ad sizes that you are OK with showing on your pages.'); ?></p>
+							<p><?php _e('For example, you might want one wide banner, one square, and one skyscraper. You should check the boxes next to the sizes that you want.'); ?></p>
+							<p><?php _e('Basic mode does NOT offer any sort of performance tracking on your AdSense account page. It\'s simply designed to make things easier.'); ?></p>
+							<p><h3><?php _e('Advanced Mode'); ?></h3></p>
+							<p><?php _e('With Advanced mode, you have the option to insert your own Ad Slot ID. This allows you to then track that ad\'s performance on your AdSense Dashboard.'); ?></p>
+							<p><?php _e('Advanced mode also gives you the option to use Asynchronous AdSense for improved performance.'); ?></p>
+						</div>
 					 </td>
 					 <td style="vertical-align:top;text-align:right;min-width:265px;">
 						<input type="button" name="submit" id="basic_mode" value="BASIC MODE" class="button-<?php echo $basic ?>" /> 
 						<input type="button" name="submit" id="advanced_mode" value="ADVANCED MODE" class="button-<?php echo $advanced ?>" />
-						<input type="checkbox" name="GARD_ADVANCED_MODE" id="GARD_ADVANCED_MODE" value="1" <?php echo $GARD_ADVANCED ?> class='hidden' />
+						<input type="checkbox" name="GARD_ADVANCED_MODE" id="GARD_ADVANCED_MODE_CHECKBOX" value="1" <?php echo $GARD_ADVANCED ?> class='hidden' />
 						<div class="group_basic" style="width:222px;text-align:justify;margin: 10px 0 10px 42px;">
 							<b style="color:red;">NOTICE PLEASE READ</b>: Basic mode is for users who don't care about ad tracking. Basic mode makes it super simple to set up any ad configuration that you want. The only drawback to basic mode is that you can not track your ad performance.
 						</div>
@@ -395,22 +436,37 @@ $GARD_CSS = get_option('GARD_CSS');
 					$suggested .= " <span class='sidebar_tag'>Sidebar</span>";
 				}
 
+				if ($size == '320x50' && get_option('GARD_MOBILE_BASIC', 0) == 1 && 'empty' == get_option('GARD_MOBILE_BASIC_'.$size, 'empty')) {
+					update_option('GARD_MOBILE_BASIC_'.$size, 1);
+					echo "<script>alert('Updated!')</script>";
+				} 
+
+
+				$help = "<a href='#help_{$size}_basic' class='popup-with-zoom-anim'>".__("<b>$key</b>")."</a>
+						<div class='zoom-anim-dialog mfp-hide help_content' id='help_{$size}_basic'>
+							<h2>".__("$size | $key $suggested")."</h2>
+							<p>If you would like to display a $size ad on your page, then click the checkbox to the far right of the setting.</p>
+							<p>If you want to filter for mobile or non mobile devices, use the dropdown menu located immediately to the left of the checkbox.</p>
+							<p><span class='content_tag'>Content</span> If you see this label next to this ad size, it means this is a suggested size for the Content area of your blog.</p>
+							<p><span class='header_tag'>Header</span> If you see this label next to this ad size, it means this is a suggested size for the Header area of your blog.</p>
+							<p><span class='sidebar_tag'>Sidebar</span> If you see this label next to this ad size, it means this is a suggested size for the Sidebar area of your blog.</p>
+						</div>";
 				$output .= '
 							<tr class="group_basic">
 								<td style="vertical-align:middle;" >
 									<label for="GARD_'.$size.'_BASIC">
-										<span style="width:50px;display:inline-block;">'.$size.'</span> | <b>'.$key.'</b>'.$suggested.'
+										<span style="width:60px;display:inline-block;">'.$size.'</span> | '.$help.' '.$suggested.'
 									</label>
 								</td>
 								<td style="vertical-align:middle;text-align:right;">
+								<select name="GARD_MOBILE_BASIC_'.$size.'">
+									<option value="0" '.selected( get_option('GARD_MOBILE_BASIC_'.$size, 0), 0,false).' >'.__('Show to All').'</option>
+									<option value="1" '.selected( get_option('GARD_MOBILE_BASIC_'.$size, 0), 1,false).' >'.__('Show to Mobile Only').'</option>
+									<option value="2" '.selected( get_option('GARD_MOBILE_BASIC_'.$size, 0), 2,false).' >'.__('Show to Non-Mobile Only').'</option>
+								</select> &nbsp;
 									<input type="checkbox" name="GARD_'.$size.'_BASIC" value="1" '.$checked.' style="padding:5px;" />
 				';
 
-				if ($size == '320x50') {
-					$GARD_MOBILE_BASIC = get_option('GARD_MOBILE_BASIC');
-					if($GARD_MOBILE_BASIC == 1) { $GARD_MOBILE_BASIC = 'checked';}
-					$output .= '<br><input type="checkbox" name="GARD_MOBILE_BASIC" value="1" '.$GARD_MOBILE_BASIC.'> Show to mobile only.';
-				}
 
 			   $output .= '</td>
 				  </tr>';
@@ -427,8 +483,13 @@ $GARD_CSS = get_option('GARD_CSS');
 				   <tr class="group_advanced" >
 					 <td style="vertical-align:top;">
 						 <label for="GARD_ASYNC">
-						Asynchronous AdSense <span style="color:orange">[BETA]</span>
-						</label>
+							<a href='#GARD_ASYNC' class='popup-with-zoom-anim'><?php _e('Asynchronous AdSense'); ?></a><span style="color:orange">[BETA]</span>
+						 </label>
+						<div class='zoom-anim-dialog mfp-hide help_content' id='GARD_ASYNC'>
+							<h2><?php _e('Asynchronous AdSense <span style="color:orange">[BETA]</span>'); ?></h2>
+							<p><?php _e('This can speed up loading of ads on your website by requesting all ads at one time rather than one by one.'); ?></p>
+							<p><?php _e('Asynchronous mode is still in BETA mode, and if you run across issues, please let us know in our <a href="http://thepluginfactory.co/community/forum/plugin-specific/gard-google-adsense-for-responsive-design/" target="_blank">support forums</a>.'); ?></p>
+						</div>						 
 						<br/>
 						<span class="smallgray" style="margin:0;font-size:11px;">BETA FEATURE: <?php echo GARD_PLUGIN_SUPPORT_LINK; ?>.</span>
 						<br/>
@@ -451,7 +512,7 @@ $GARD_CSS = get_option('GARD_CSS');
 			global $adsizes;
 			global $has_ads;
 			$output = '';
-
+			$adcount = 1;
 			foreach($adsizes as $size => $key) {
 
 				$value = get_option('GARD_'.$size);
@@ -491,23 +552,62 @@ $GARD_CSS = get_option('GARD_CSS');
 				if ( in_array($size, $sidebar) ) {
 					$suggested .= " <span class='sidebar_tag'>Sidebar</span>";
 				}
+				
+				if ($size == '320x50' && get_option('GARD_MOBILE_ADVANCED', 0) == 1 && 'empty' == get_option('GARD_MOBILE_ADVANCED_'.$size, 'empty')) {
+					update_option('GARD_MOBILE_ADVANCED_'.$size, 1);
+					echo "<script>alert('Updated!')</script>";
+				} 
 
+				$size_arr = explode("x", $size);
+
+				$help = "<a href='#help_{$size}_advanced' class='popup-with-zoom-anim'>".__("<b>$key</b>")."</a>
+						<div class='zoom-anim-dialog mfp-hide help_content' id='help_{$size}_advanced'>
+							<h2>".__("$size | $key $suggested")."</h2>
+							<p>If you would like to display a $size ad on your page, please get your ad slot ID from your current AdSense code.</p>
+							<p><b>Below you will find examples of where to find your Slot ID</p>
+							<p>Standard Code:<br><span style='padding-left: 45px;display: block;'>
+							".nl2br(htmlentities('
+							<script type="text/javascript"><!--
+								google_ad_client = "ca-pub-1186984593972216";
+								/* Top '.$size_arr[0].'x'.$size_arr[1].' */
+								google_ad_slot = "')).'<b style="font-size: 20px;color: #000;background: lightyellow;padding: 3px;">2388600169</b>'.nl2br(htmlentities('";
+								google_ad_width = '.$size_arr[0].';
+								google_ad_height = '.$size_arr[1].';
+								//-->
+								</script>
+								<script type="text/javascript"
+								src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+								</script>'))."</span>
+							</p><p>Async Code:<br><span style='padding-left: 45px;display: block;'>
+								".nl2br(htmlentities('<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+								<!-- Top '.$size_arr[0].'x'.$size_arr[1].' -->
+								<ins class="adsbygoogle"
+								     style="display:inline-block;width:'.$size_arr[0].'px;height:'.$size_arr[1].'px"
+								     data-ad-client="ca-pub-1186984593972216"
+								     data-ad-slot="')).'<b style="font-size: 20px;color: #000;background: lightyellow;padding: 3px;">2388600169</b>'.nl2br(htmlentities('"></ins>
+								<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+								</script>'))."</span>
+							</p>
+							<p><span class='content_tag'>Content</span> If you see this label next to this ad size, it means this is a suggested size for the Content area of your blog.</p>
+							<p><span class='header_tag'>Header</span> If you see this label next to this ad size, it means this is a suggested size for the Header area of your blog.</p>
+							<p><span class='sidebar_tag'>Sidebar</span> If you see this label next to this ad size, it means this is a suggested size for the Sidebar area of your blog.</p>
+						</div>";
 				$output .= '
 							<tr class="group_advanced" '.$highlight.' '.$hidden.'>
 								<td style="vertical-align:middle;'.$fade.'" >
 									<label for="GARD_'.$size.'">
-										<span style="width:50px;display:inline-block;">'.$size.'</span> | <b>'.$key.'</b>'.$suggested.'
+										<span style="width:60px;display:inline-block;">'.$size.'</span> | '.$help.' '.$suggested.'
 									</label>
 								</td>
 								<td style="vertical-align:middle;text-align:right;">
 									<input type="text" name="GARD_'.$size.'" value="'.$value.'" style="padding:5px;" />
+									<select name="GARD_MOBILE_ADVANCED_'.$size.'">
+										<option value="0" '.selected( get_option('GARD_MOBILE_ADVANCED_'.$size, 0), 0,false).' >'.__('Show to All').'</option>
+										<option value="1" '.selected( get_option('GARD_MOBILE_ADVANCED_'.$size, 0), 1,false).' >'.__('Show to Mobile Only').'</option>
+										<option value="2" '.selected( get_option('GARD_MOBILE_ADVANCED_'.$size, 0), 2,false).' >'.__('Show to Non-Mobile Only').'</option>
+									</select>
 				';
-
-				if ($size == '320x50') {
-					$GARD_MOBILE_ADVANCED = get_option('GARD_MOBILE_ADVANCED');
-					if($GARD_MOBILE_ADVANCED == 1) { $GARD_MOBILE_ADVANCED = 'checked';}
-					$output .= '<br><input type="checkbox" name="GARD_MOBILE_ADVANCED" value="1" '.$GARD_MOBILE_ADVANCED.'> Show to mobile only.';
-				}
 
 				if (isset($error) && $error == "count") {
 					$output .= '<br/><b>Invalid number of digits.</b><br/>
@@ -574,7 +674,6 @@ $GARD_CSS = get_option('GARD_CSS');
 			});
 
 			$('#advanced_mode').click(function(){
-				$('#GARD_ADVANCED_MODE').attr('checked',true);
 
 				$(this).removeClass('button-secondary');
 				$('#basic_mode').removeClass('button-primary');
@@ -584,10 +683,10 @@ $GARD_CSS = get_option('GARD_CSS');
 
 				$('.group_basic').hide();
 				$('.group_advanced').fadeIn( "slow" );
+				$('#GARD_ADVANCED_MODE_CHECKBOX').attr('checked', true);
 			});
 			
 			$('#basic_mode').click(function(){
-				$('#GARD_ADVANCED_MODE').attr('checked',false);
 
 				$(this).removeClass('button-secondary');
 				$('#advanced_mode').removeClass('button-primary');
@@ -597,6 +696,7 @@ $GARD_CSS = get_option('GARD_CSS');
 
 				$('.group_advanced').hide();
 				$('.group_basic').fadeIn( "slow" );
+				$('#GARD_ADVANCED_MODE_CHECKBOX').attr('checked',false);
 			});
 
 
@@ -664,6 +764,24 @@ $GARD_CSS = get_option('GARD_CSS');
 			$('#adoptions').show();
 			$('.samplediv').show();
 
+			// Popup settings
+				$(document).ready(function() {
+					$('.popup-with-zoom-anim').magnificPopup({
+						type: 'inline',
+
+						fixedContentPos: false,
+						fixedBgPos: true,
+
+						overflowY: 'auto',
+
+						closeBtnInside: true,
+						preloader: false,
+
+						midClick: true,
+						removalDelay: 300,
+						mainClass: 'my-mfp-zoom-in'
+					});
+				});
 		});
 	});
 </script>

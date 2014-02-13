@@ -3,7 +3,7 @@
     Plugin Name: Google Adsense for Responsive Design - GARD
 	Plugin URI: http://thedigitalhippies.com/gard
 	Description: Allows you to use shortcode to display responsive adsense ads throughout your responsive theme.
-	Version: 2.1
+	Version: 2.2
 	Author: The Plugin Factory,The Digital Hippies
 	Author URI: http://thedigitalhippies.com
 */
@@ -26,7 +26,7 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 	
 	include('adsizes.php');
 
-	define('GARDPLUGINOPTIONS_VER', '2.1');
+	define('GARDPLUGINOPTIONS_VER', '2.2');
 	define('GARDPLUGINOPTIONS_ID', 'GARD-plugin-options');
 	define('GARDPLUGINOPTIONS_NICK', 'Google Adsense for Responsive Design');
 	define('GARD_FOLDER', dirname(__FILE__) );
@@ -174,16 +174,20 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 
 							$tag = $type."_".$size;
 						$code = get_option("GARD_".$size);
+						$original_size = $size;
 						$size = explode('x', $size);
 						$size1 = $size[0];
 						$size2 = $size[1];
 
-						$mobile = get_option('GARD_MOBILE_ADVANCED');
+						$mobile = get_option('GARD_MOBILE_ADVANCED_'.$original_size);
 
-						if( $size1 == '320' && $mobile == 1 && gard_ismobile() == FALSE ) {
+						if( $mobile == 1 && gard_ismobile() === FALSE ) {
+							// If ad is set to show to mobile only, and this is not a mobile device, skip the output of this ad
+							continue;
+						} elseif( $mobile == 2 && gard_ismobile() === TRUE ) {
+							// If ad is set to show to non-mobile only, and this is a mobile device, skip the output of this ad
 							continue;
 						}
-
 
 						if ( strlen($code) == '10' && is_numeric($code)) {			
 							$adsense .= ' else if ( adWidth >= '.$size1.' ) {
@@ -229,13 +233,18 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 						global $adsizes;
 						foreach($adsizes as $size => $description) {
 							$code = get_option("GARD_".$size);
+							$original_size = $size;
 							$size = explode('x', $size);
 							$size1 = $size[0];
 							$size2 = $size[1];
 
-							$mobile = get_option('GARD_MOBILE_ADVANCED');
+							$mobile = get_option('GARD_MOBILE_ADVANCED_'.$original_size);
 
-							if( $size1 == '320' && $mobile == 1 && gard_ismobile() == FALSE ) {
+							if( $mobile == 1 && gard_ismobile() === FALSE ) {
+								// If ad is set to show to mobile only, and this is not a mobile device, skip the output of this ad
+								continue;
+							} elseif( $mobile == 2 && gard_ismobile() === TRUE ) {
+								// If ad is set to show to non-mobile only, and this is a mobile device, skip the output of this ad
 								continue;
 							}
 
@@ -310,7 +319,7 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 						}
 
 						$tag = $type."_".$size;
-
+						$original_size = $size;
 						$size = explode('x', $size);
 						$size1 = $size[0];
 						$size2 = $size[1];
@@ -319,9 +328,13 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 							continue;
 						}
 
-						$mobile = get_option('GARD_MOBILE_BASIC');
+						$mobile = get_option('GARD_MOBILE_BASIC_'.$original_size);
 
-						if( $size1 == '320' && $mobile == 1 && gard_ismobile() == FALSE ) {
+						if( $mobile == 1 && gard_ismobile() === FALSE ) {
+							// If ad is set to show to mobile only, and this is not a mobile device, skip the output of this ad
+							continue;
+						} elseif( $mobile == 2 && gard_ismobile() === TRUE ) {
+							// If ad is set to show to non-mobile only, and this is a mobile device, skip the output of this ad
 							continue;
 						}
 
@@ -370,7 +383,8 @@ if( is_admin() && GARD_PERMISSION_CHECK() ) {
 				wp_enqueue_style(   'gard_ad_style' );
 			}
 
-		$adsense = str_replace(array("\n","\t"), "", $adsense);
+		if (!isset($_GET['GARD_DEBUG'])) 
+			$adsense = str_replace(array("\n","\t"), "", $adsense);
 
 		return $adsense;
 	}

@@ -1,3 +1,13 @@
+<span style='margin-bottom: -20px;background: #FFF;width: 100%;display: block;text-align: center;'>
+	<a href="bitcoin:1MeQSZomWjpdf4QCe6wpG9abDyN6xwEFrA?message=gard_donation">
+		<img src="<?php echo plugins_url( '/images/donate_bitcoin.jpg', __FILE__ ) ?>">
+	</a>
+</span>
+<br>
+<span style='position: absolute;margin-top: 14px;font-weight: 700;margin-left: 9px;'>1MeQSZomWjpdf4QCe6wpG9abDyN6xwEFrA</span>
+<a href="bitcoin:1MeQSZomWjpdf4QCe6wpG9abDyN6xwEFrA?message=gard_donation">
+	<img src="<?php echo plugins_url( '/images/tpf_donate.png', __FILE__ ) ?>" style="width:100%"/>
+</a>
 <h1><a href='<?php echo GARD_PRO_LINK ?>?so=get_gard_pro_today' target='_blank' title='GARD Pro Official Website'>GET GARD PRO TODAY</a></h1>
 <a href='<?php echo GARD_PRO_LINK ?>?so=gard_buy_now_1' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a> | 
 <a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 72 SECOND COMMERCIAL'><b>WATCH 72 SECOND COMMERCIAL</b></a><br>
@@ -45,31 +55,31 @@ if ($now >= $blackfriday_start && $now <= $blackfriday_stop) {
 <h2><a href="admin.php?page=gard-pro-info" style='font-size: 19px;font-weight: bold;'>Now Try GARD Pro for FREE!</a></h2>
 
 <h3>100% MONEY BACK GUARANTEE</h3>
-180 day money back guarantee! If at anytime in the first 180 days after your purchase of GARD Pro, you decide that you want a refund, just ask! No questions asked, 100% money back guarantee. We want you to be satisfied, with our product. If you want features added, please ask!
-
-<h3>WORKS ON ALL DEVICES</h3>
-The driving force behind GARD Pro is that it works on any device. No matter how your website visitors choose to access your website, rest assured that GARD Pro will serve up the right sized AdSense ad.
-
-<h3>FREE UPGRADES FOR LIFE</h3>
-Anytime we have an upgraded version of GARD Pro available, you’ll get it free! Forever! Updating is super easy. Update GARD Pro as you do any other WordPress plugin, right in your WordPress dashboard.<br>
-
-<h3>5 AD WIDGETS INCLUDED</h3>
-GARD Pro includes 5 custom ad widgets! One for each custom group. You can have a widget for responsive banners, one for responsive skyscrapers, one for responsive squares, one for responsive rectangles, and one for link units.<br>
-
-<br><a href='<?php echo GARD_PRO_LINK ?>?so=gard_buy_now_2' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a> | 
-<a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 72 SECOND COMMERCIAL'><b>WATCH 72 SECOND COMMERCIAL</b></a><br>
-
-<h3>ADSENSE POLICY COMPLIANT</h3>
-GARD Pro enforces Google AdSense policies. We limit image ads to 3 per page, text ads to 3 per page, and 300×600 ads to one per page. Never worry about being banned for misuse of AdSense!<br>
+60 day money back guarantee! If at anytime in the first 60 days after your purchase of GARD Pro, you decide that you want a refund, just ask! No questions asked, 100% money back guarantee. We want you to be satisfied, with our product. If you want features added, please ask!
 
 <h3>5 AD GROUPS</h3>
 Create ad groups. This allows you to have groups specific to links, banners, skyscrapers, etc.<br>
+
+<h3>FREE UPGRADES FOR LIFE</h3>
+Anytime we have an upgraded version of GARD Pro available, you’ll get it free! Forever! Updating is super easy. Update GARD Pro as you do any other WordPress plugin, right in your WordPress dashboard.<br>
 
 <h3>CUSTOM SHORTCODE</h3>
 Define a custom shortcode for inserting each group into the content.<br>
 
 <h3>AUTO INSERT</h3>
 Auto insert responsive AdSense ads into user specified content types.<br>
+
+<br><a href='<?php echo GARD_PRO_LINK ?>?so=gard_buy_now_2' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a> | 
+<a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 72 SECOND COMMERCIAL'><b>WATCH 72 SECOND COMMERCIAL</b></a><br>
+
+<h3>5 AD WIDGETS INCLUDED</h3>
+GARD Pro includes 5 custom ad widgets! One for each custom group. You can have a widget for responsive banners, one for responsive skyscrapers, one for responsive squares, one for responsive rectangles, and one for link units.<br>
+
+<h3>ADSENSE POLICY COMPLIANT</h3>
+GARD Pro enforces Google AdSense policies. We limit image ads to 3 per page, text ads to 3 per page, and 300×600 ads to one per page. Never worry about being banned for misuse of AdSense!<br>
+
+<h3>WORKS ON ALL DEVICES</h3>
+The driving force behind GARD Pro is that it works on any device. No matter how your website visitors choose to access your website, rest assured that GARD Pro will serve up the right sized AdSense ad.
 
 <br><a href='<?php echo GARD_PRO_LINK ?>?so=gard_buy_now_3' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a> | 
 <a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 72 SECOND COMMERCIAL'><b>WATCH 72 SECOND COMMERCIAL</b></a><br>

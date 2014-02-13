@@ -37,6 +37,8 @@ $settings = $gp_settings = array();
 	foreach($adsizes as $size => $key) {
 		register_setting(GARDPLUGINOPTIONS_ID.'_options', 'GARD_'.$size);
 		register_setting(GARDPLUGINOPTIONS_ID.'_options', 'GARD_'.$size.'_BASIC');
+		register_setting(GARDPLUGINOPTIONS_ID.'_options', 'GARD_MOBILE_BASIC_'.$size);
+		register_setting(GARDPLUGINOPTIONS_ID.'_options', 'GARD_MOBILE_ADVANCED_'.$size);
 	}
 
 # GARD PRO DEMO
