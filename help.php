@@ -53,7 +53,15 @@ if(strlen(get_option('GARD_ID')) <= 0) {
 							<a href='admin.php?page=gard'>Configure the settings here</a>. <?php echo $step1; ?>
 							<br/>
 							Place the shortcode [GARD] in your posts or pages.<br/>
-							Profit!!!
+							Profit!!!<br>
+							If you are looking to put [GARD] in a widget, then you may need a plugin <a href='https://wordpress.org/plugins/shortcode-widget/' target='_blank'>like this one</a> so that your widget areas can use shortcodes.
+							<br>
+							<h4>How to use the built in help</h4>
+							Every setting in GARD has an underlined title. The titles are underlined with a dashed underline.
+							<br>
+							On most computer systems, your mouse should turn into a question mark when hovering over the title links.
+							<br>
+							Simply click on any setting title, and a pop up will appear with help text for that section.
 						</td>
 					</tr>
 					<tr style="vertical-align:top; width:100px;">

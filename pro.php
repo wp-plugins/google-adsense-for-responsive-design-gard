@@ -153,7 +153,7 @@ if (isset($_GET['_import_gard_settings'])) {
 		.videobutton:hover {opacity: .6;}
 
 		.video16 {
-			background: url('http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png') no-repeat;
+			background: url('<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>') no-repeat;
 			padding-left: 29px;
 			 -khtml-opacity:.40; 
 			 -moz-opacity:.40; 
@@ -246,7 +246,7 @@ if (isset($_GET['_import_gard_settings'])) {
 	<div class="wrap">
 		<div id="icon-plugins" class="icon32"><br></div>	
 		
-		<h2>GARD Pro v2.3.1 » Settings</h2>
+		<h2>GARD Pro » Settings</h2>
 
 		<div id="GARD_WINDOW">
 			<table>
@@ -569,7 +569,7 @@ if (isset($_GET['_import_gard_settings'])) {
 												Leave all options set to 'Select' to not insert any ads.</span>
 										 </td>
 										 <td style="vertical-align:middle;text-align:right;"> 
-											<a class="fancybox-media hoverZoomLink" href="http://youtu.be/ddU4MCJW7Ug" rel="media-gallery"><img class="videobutton" src="http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png"></a>
+											<a class="fancybox-media hoverZoomLink" href="http://youtu.be/ddU4MCJW7Ug" rel="media-gallery"><img class="videobutton" src="<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>"></a>
 										 </td>
 									   </tr>
 
@@ -584,7 +584,7 @@ if (isset($_GET['_import_gard_settings'])) {
 											  <input type="checkbox" value="1" name="GARD_PRO_DEMO_AUTO_INSERT_PAGE"  <?php checked( get_option('GARD_PRO_DEMO_AUTO_INSERT_PAGE'), 1 ); ?>     > Page
 										 </td>
 										 <td style="vertical-align:middle;text-align:right;"> 
-											<a class="fancybox-media hoverZoomLink" href="http://youtu.be/uhUKKvf9gnE" rel="media-gallery"><img class="videobutton" src="http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png"></a>
+											<a class="fancybox-media hoverZoomLink" href="http://youtu.be/uhUKKvf9gnE" rel="media-gallery"><img class="videobutton" src="<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>"></a>
 										 </td>
 									   </tr>
 
@@ -682,7 +682,7 @@ if (isset($_GET['_import_gard_settings'])) {
 											<textarea style="margin-left:20px" name="GARD_PRO_DEMO_FILTER_WORDS" cols="85" rows="3"><?php echo get_option('GARD_PRO_DEMO_FILTER_WORDS'); ?></textarea>
 										 </td>
 										 <td style="vertical-align:middle;text-align:right;"> 
-											<a class="fancybox-media hoverZoomLink" href="http://youtu.be/HEmvrl7An2I" rel="media-gallery"><img class="videobutton" src="http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png"></a>
+											<a class="fancybox-media hoverZoomLink" href="http://youtu.be/HEmvrl7An2I" rel="media-gallery"><img class="videobutton" src="<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>"></a>
 										 </td>
 									   </tr>
 
@@ -696,7 +696,7 @@ if (isset($_GET['_import_gard_settings'])) {
 											<textarea style="margin-left:20px" name="GARD_PRO_DEMO_FILTER_IP" cols="85" rows="7"><?php echo get_option('GARD_PRO_DEMO_FILTER_IP'); ?></textarea>
 										 </td>
 										 <td style="vertical-align:middle;text-align:right;"> 
-											<a class="fancybox-media hoverZoomLink" href="http://youtu.be/0QBr0sLHSYw" rel="media-gallery"><img class="videobutton" src="http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png"></a>
+											<a class="fancybox-media hoverZoomLink" href="http://youtu.be/0QBr0sLHSYw" rel="media-gallery"><img class="videobutton" src="<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>"></a>
 										 </td>
 									   </tr>
 
@@ -742,7 +742,7 @@ if (isset($_GET['_import_gard_settings'])) {
 					<thead>
 							<tr><th style="min-width:265px;"><input id="main_submit" type="submit" name="submit" value="Save Settings" class="button-primary">
 								<input id="cleargroup1" class=".button button-secondary" style="width: 143px;" value="Clear Group Settings">
-								<a class="fancybox-media hoverZoomLink" href="http://youtu.be/mHP-PBDGf0g" rel="media-gallery"><img class="videobutton" src="http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png"></a>
+								<a class="fancybox-media hoverZoomLink" href="http://youtu.be/mHP-PBDGf0g" rel="media-gallery"><img class="videobutton" src="<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>"></a>
 							</th>
 							<th style="text-align:right" colspan="2"></th>
 					   </tr>
@@ -1347,7 +1347,7 @@ if (isset($_GET['_import_gard_settings'])) {
 					<thead>
 							<tr><th style="min-width:265px;"><input id="main_submit" type="submit" name="submit" value="Save Settings" class="button-primary">
 								<input id="cleargroup2" class=".button button-secondary" style="width: 143px;" value="Clear Group Settings">
-								<a class="fancybox-media hoverZoomLink" href="http://youtu.be/mHP-PBDGf0g" rel="media-gallery"><img class="videobutton" src="http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png"></a>
+								<a class="fancybox-media hoverZoomLink" href="http://youtu.be/mHP-PBDGf0g" rel="media-gallery"><img class="videobutton" src="<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>"></a>
 							</th>
 							<th style="text-align:right" colspan="2"></th>
 					   </tr>
@@ -1953,7 +1953,7 @@ if (isset($_GET['_import_gard_settings'])) {
 					<thead>
 							<tr><th style="min-width:265px;"><input id="main_submit" type="submit" name="submit" value="Save Settings" class="button-primary">
 								<input id="cleargroup3" class=".button button-secondary" style="width: 143px;" value="Clear Group Settings">
-								<a class="fancybox-media hoverZoomLink" href="http://youtu.be/mHP-PBDGf0g" rel="media-gallery"><img class="videobutton" src="http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png"></a>
+								<a class="fancybox-media hoverZoomLink" href="http://youtu.be/mHP-PBDGf0g" rel="media-gallery"><img class="videobutton" src="<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>"></a>
 							</th>
 							<th style="text-align:right" colspan="2"></th>
 					   </tr>
@@ -2559,7 +2559,7 @@ if (isset($_GET['_import_gard_settings'])) {
 					<thead>
 							<tr><th style="min-width:265px;"><input id="main_submit" type="submit" name="submit" value="Save Settings" class="button-primary">
 								<input id="cleargroup4" class=".button button-secondary" style="width: 143px;" value="Clear Group Settings">
-								<a class="fancybox-media hoverZoomLink" href="http://youtu.be/mHP-PBDGf0g" rel="media-gallery"><img class="videobutton" src="http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png"></a>
+								<a class="fancybox-media hoverZoomLink" href="http://youtu.be/mHP-PBDGf0g" rel="media-gallery"><img class="videobutton" src="<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>"></a>
 							</th>
 							<th style="text-align:right" colspan="2"></th>
 					   </tr>
@@ -3165,7 +3165,7 @@ if (isset($_GET['_import_gard_settings'])) {
 					<thead>
 							<tr><th style="min-width:265px;"><input id="main_submit" type="submit" name="submit" value="Save Settings" class="button-primary">
 								<input id="cleargroup5" class=".button button-secondary" style="width: 143px;" value="Clear Group Settings">
-								<a class="fancybox-media hoverZoomLink" href="http://youtu.be/mHP-PBDGf0g" rel="media-gallery"><img class="videobutton" src="http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png"></a>
+								<a class="fancybox-media hoverZoomLink" href="http://youtu.be/mHP-PBDGf0g" rel="media-gallery"><img class="videobutton" src="<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>"></a>
 							</th>
 							<th style="text-align:right" colspan="2"></th>
 					   </tr>
@@ -3770,7 +3770,7 @@ if (isset($_GET['_import_gard_settings'])) {
 					<td style="vertical-align:top; padding-left:15px;margin-top: -3px;display:block;max-width: 500px;">
 
 <a href="http://thepluginfactory.co/warehouse/gard-pro/?so=gard_belcher_gp_demo" target='_blank'>
-	<img src="<?php echo plugin_dir_url(__FILE__) ?>images/gp1.png" style="width:100%" >
+	<img src="<?php echo plugin_dir_url(__FILE__) ?>images/gp1.png?v2" style="width:100%" >
 </a>
 
 				<div id="welcome-panel" class="welcome-panel">
@@ -3799,11 +3799,11 @@ if (isset($_GET['_import_gard_settings'])) {
 										<ul class="smallgray" style="margin-left:30px;">
 											<li>Click this icon anywhere you see it next to a setting. It will launch a training video for that specific option! And yes, the video is responsive, just like GARD!</li>
 										</ul>
-									<li><span class="welcome-icon welcome-widgets-menus"><a class="fancybox-media hoverZoomLink" href="http://youtu.be/kKL7QefKNkw" rel="media-gallery"><img class="videobutton" src="http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png"></a> Control-S to save!</span></li>
+									<li><span class="welcome-icon welcome-widgets-menus"><a class="fancybox-media hoverZoomLink" href="http://youtu.be/kKL7QefKNkw" rel="media-gallery"><img class="videobutton" src="<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>"></a> Control-S to save!</span></li>
 										<ul class="smallgray" style="margin-left:30px;">
 											<li>Simply press and hold down the control key, and tap the letter s on your keyboard to save your settings anytime!</li>
 										</ul>
-									<li><span class="welcome-icon welcome-comments"><a class="fancybox-media hoverZoomLink" href="http://youtu.be/0o4EN8iZ34Y" rel="media-gallery"><img class="videobutton" src="http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png"></a> Import ad settings from old versions of GARD or GARD Pro?</span></li>
+									<li><span class="welcome-icon welcome-comments"><a class="fancybox-media hoverZoomLink" href="http://youtu.be/0o4EN8iZ34Y" rel="media-gallery"><img class="videobutton" src="<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>"></a> Import ad settings from old versions of GARD or GARD Pro?</span></li>
 
 																		<ul class="smallgray" style="margin-left:30px;">
 											<li>We have detected settings stored in your database from an old version of GARD or GARD Pro.</li>
@@ -3811,7 +3811,7 @@ if (isset($_GET['_import_gard_settings'])) {
 											<li><input type="submit" name="submit" value="Import Old Settings" class="button-secondary" id="importold"> <input type="submit" name="submit" value="Permanently Delete Old Settings" class="button-secondary" id="deleteold"></li>
 										</ul>
 										
-									<li><span class="welcome-icon welcome-learn-more"><a class="fancybox-media hoverZoomLink" href="http://youtu.be/E4xhEXb_mzY" rel="media-gallery"><img class="videobutton" src="http://dev.thepluginfactory.co/wp-content/plugins/gard-pro/video16.png"></a> Use this tool to magically get your ad code.</span></li>
+									<li><span class="welcome-icon welcome-learn-more"><a class="fancybox-media hoverZoomLink" href="http://youtu.be/E4xhEXb_mzY" rel="media-gallery"><img class="videobutton" src="<?php echo plugins_url( '/images/video16.png', __FILE__ ) ?>"></a> Use this tool to magically get your ad code.</span></li>
 										<ul class="smallgray" style="margin-left:30px;">
 											<li></li>
 											<li><table>
