@@ -1,4 +1,4 @@
-﻿=== Google AdSense for Responsive Design - GARD ===
+=== Google AdSense for Responsive Design - GARD ===
 Contributors: The Plugin Factory
 Donate link: http://thedigitalhippies.com/garddonate
 Tags: responsive, AdSense, responsive AdSense, Google AdSense, responsive ads, responsive design, responsive design, gard, advertising, ads, The Plugin Factory
@@ -14,7 +14,7 @@ GARD (Google AdSense for Responsive Design) allows you to easily place Responsiv
 
 GARD allows you to easily place responsive (asynchronous optional) Google AdSense in your website's content via the use of the shortcode [GARD]. GARD offers extremem control over ad placement and features. With a super simple "BASIC MODE", all you need to do is drop in your AdSense publisher ID, check a few boxes, and you're all set with a fully responsive AdSense campaign.
 
-GARD allows custom CSS styling, so you can customize the look of ads anytime you'd like.
+GARD allows custom CSS styling, so you can customize the look of ads anytime you'd like to.
 
 The inserted ads will never exceed the content area width, and will select the largest available size ad to show depending on which ads you have provided GARD to pick from.
 
