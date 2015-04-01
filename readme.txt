@@ -4,7 +4,7 @@ Donate link: http://thedigitalhippies.com/garddonate
 Tags: responsive, AdSense, responsive AdSense, Google AdSense, responsive ads, responsive design, responsive design, gard, advertising, ads, The Plugin Factory
 Requires at least: 3.0.1
 Tested up to: 3.8
-Stable tag: 2.21
+Stable tag: 2.22
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,9 +12,9 @@ GARD (Google AdSense for Responsive Design) allows you to easily place Responsiv
 
 == Description ==
 
-GARD allows you to easily place responsive (asynchronous optional) Google AdSense in your website's content via the use of the shortcode [GARD]. GARD offers extremem control over ad placement and features. With a super simple "BASIC MODE", all you need to do is drop in your AdSense publisher ID, check a few boxes, and you're all set with a fully responsive AdSense campaign.
+GARD allows you to easily place responsive (asynchronous optional) Google AdSense in your website's content via the use of the shortcode [GARD]. GARD offers extreme control over ad placement and features. With a super simple "BASIC MODE", all you need to do is drop in your AdSense publisher ID, check a few boxes, and you're all set with a fully responsive AdSense campaign.
 
-GARD allows custom CSS styling, so you can customize the look of ads anytime you'd like to.
+GARD allows custom CSS styling, so you can customize the look of ads anytime you'd like.
 
 The inserted ads will never exceed the content area width, and will select the largest available size ad to show depending on which ads you have provided GARD to pick from.
 
@@ -127,7 +127,7 @@ We check for three types of ads; link units, ad units, and the 300x600 ad size. 
 
 GARD (What you're looking at now)  
 [GARD Pro](http://thepluginfactory.co/warehouse/gard-pro "GARD Pro") (Offers many additional features to extend GARD)  
-* GARD Pro costs about the same as a night out.
+* GARD Pro costs $24.95, and is appropriate if you expect to make more than $24.95 in ad revenue from your site. :P
 
 = How do I contact the plugin developer for help? =
 Support is available on [GARD Official WordPress Plugin Support Forum](http://thepluginfactory.co/community/forum/plugin-specific/gard-google-adsense-for-responsive-design/ "GARD Official WordPress Plugin Support Forum").
@@ -140,24 +140,22 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 
 == Changelog ==
 
-= 2.3 =
-* [UPDATED] Removed bitcoin donation link from sidebar.
-* [UPDATED] Added two new sizes, 970x250 and 300x1050.
-* [ADDED] Adblock notification on back end.
-* [ADDED] Code for discounts during holiday season.
+= 2.22 =
+* [REMOVED] Bitcoin donation option.
+* [ADDED] http://ConsultingWP.com link on options page.
 
 = 2.2 =
 * [ADDED] Ability to show ads to desktop only.
 * [ADDED] Help for every setting, just click on the setting title to see the help.
-* [ADDED] Bitcoin donate link.
+* [ADDED] Bitcoin donate link
 * [FIXED] A few PHP warnings.
 
 = 2.1 =
 * [ADDED] ARD Pro Demo
-* [UPDATED] Some design changes to work with WordPress 3.8.
+* [UPDATED] Some design changes to work with WordPress 3.8
 
 = 2.0.11 =
-* [REMOVED] Unused javascript from package.
+* [REMOVED] Unused javascript from package
 
 = 2.0.10 =
 * [UPDATE] Removed heading for link unit type on options page.
@@ -173,11 +171,11 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 * [FIXED] Settings page not displaying on some websites.
 
 = 2.0.6 =
-* [ADDED] Large Skyscraper 300x600 ad size.
+* [ADDED] Large Skyscraper 300x600 ad size
 
 = 2.0.5 =
 * [UPDATE] Fixed styling of BASIC mode notice message.
-* [ADDED] Coupon code for GARD Pro.
+* [ADDED] Coupon code for GARD Pro
 
 = 2.0.4 =
 * Internal update, no official release.
@@ -205,17 +203,17 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 * [NEW FEATURE] GARD Pro: Insert random number of ads in content.
 * [NEW FEATURE] GARD Pro: Default positioning of left, right, or center.
 * [NEW FEATURE] GARD Pro: Specify which custom post types to insert ads into.
-* [NEW BETA FEATURE] GARD & GARD Pro: Asynchronous AdSense.
+* [NEW BETA FEATURE] GARD & GARD Pro: Asynchronous AdSense
 
 = 1.2.1 =
-* Added 320x50 Mobile Banner Size.
+* Added 320x50 Mobile Banner Size
 
 = 1.2 =
 * Added a help page, complete with video setup guide.
 
 = 1.1 =
 * Prepared for integration with GARD Pro: http://thedigitalhippies.com/gardpro
-* Fixed icon on settings page.
+* Fixed icon on settings page
 
 = 1.0.1 =
 * Fixed incorrect admin icon code.
@@ -225,15 +223,8 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 
 == Upgrade Notice ==
 
-= 2.3 =
-* [UPDATED] Removed bitcoin donation link from sidebar.
-* [UPDATED] Added two new sizes, 970x250 and 300x1050.
-* [UPDATED] Mobile device detection to include more phones and tablets.
-* [ADDED] Adblock notification on back end.
-* [ADDED] Code for discounts during holiday season.
-
 = 2.1 =
-* [ADDED] GARD Pro Demo
+* [ADDED] ARD Pro Demo
 * [UPDATED] Some design changes to work with WordPress 3.8
 
 = 2.0.11 =

@@ -1,14 +1,13 @@
 <?php
+global $adsizes;
 $adsizes = array(
     #	Google Adsense Display and Text Unit Sizes
-		'970x250' => 'Billboard', 
 		'970x90'  => 'Large Leaderboard', 
 		'728x90'  => 'Leaderboard',
 		'468x60'  => 'Banner ',
 		'336x280' => 'Large Rectangle',
-		'320x100' => 'Large Mobile Banner',
+		'320x100'  => 'Large Mobile Banner',
 		'320x50'  => 'Mobile Banner',
-		'300x1050'=> 'Portrait',
 		'300x600' => 'Large Skyscraper',
 		'300x250' => 'Medium Rectangle',
 		'250x250' => 'Square ',
@@ -30,3 +29,5 @@ $adsizes = array(
 		'120x90'  => 'Displays 3 links'
 
 );
+
+$GLOBALS['adsizes'] = $adsizes;

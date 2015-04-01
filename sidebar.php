@@ -1,47 +1,14 @@
-<a href="http://thepluginfactory.co/warehouse/gard-pro/?so=com_thumb" target="_blank">
-	<img style='width:100%' src="<?php echo plugins_url( '/images/com_thumb.png', __FILE__ ) ?>">
-</a>
-<hr>
+<h1><a href='<?php echo GARD_PRO_LINK ?>?so=get_gard_pro_today' target='_blank' title='GARD Pro Official Website'>GET GARD PRO TODAY</a></h1>
+<a href='<?php echo GARD_PRO_LINK ?>?so=gard_buy_now_1' target='_blank' title='GARD Pro Official Website'><b>BUY NOW</b></a> | 
+<a href='http://www.youtube.com/watch?v=O7_Fi58TWGc' target='_blank' title='WATCH 72 SECOND COMMERCIAL'><b>WATCH 72 SECOND COMMERCIAL</b></a><br>
+<br>
 
 <?php
-
-date_default_timezone_set('America/Los_Angeles');
-
-$now = time();
-$threeweeks = '1814400';
-$twoweeks = '1209600';
-$one_day = '86400';
-
-$blackfriday_date = '1417132800'; 
-$christmas_date = '1419465600';
-
-$blackfriday_start = $blackfriday_date - $threeweeks;
-$blackfriday_stop = $blackfriday_date + ($one_day * 4);									
-
-$christmas_start = $christmas_date - $twoweeks;
-$christmas_stop = $christmas_date + 84600;
-
-if ($now >= $blackfriday_start && $now <= $blackfriday_stop) {
-	?>
-	<h3 style="color:red;margin:0;">BLACK FRIDAY / CYBER MONDAY SALE</h3>
-		Use discount code <b><pre style="font-size:14px;display:initial;color:black;">2014HOLIDAY</pre></b> anytime between Black Friday and Cyber Monday to receive 40% off of <a href='<?php echo GARD_PRO_LINK ?>?so=gard_black_friday' target='_blank' title='GARD Pro Official Website'><b>GARD Pro</b></a>.<br>
-		Valid dates: November 29, 2013 through December 2, 2013<br>
-		One discount per order.
-		<br>
-	<?php
-} elseif ($now >= $christmas_start && $now <= $christmas_stop) {
-	?>
-	<h3 style="color:green;margin:0;">CHRISTMAS EVE / CHRISTMAS DAY</h3>
-		Use discount code <b><pre style="font-size:14px;display:initial;color:black;">2014HOLIDAY</pre></b> on Christmas Eve or Christmas Day to receive 40% off of <a href='<?php echo GARD_PRO_LINK ?>?so=gard_christmas' target='_blank' title='GARD Pro Official Website'><b>GARD Pro</b></a>.<br>
-		Valid dates: December 24, 2013 and December 25, 2013<br>
-		One discount per order.
-		<br>
-	<?php
-}
+// Black Friday Specials
 
 ?>
 <a href="http://thepluginfactory.co/warehouse/gard-pro/?so=gard_belcher" target='_blank'>
-	<img src="<?php echo plugin_dir_url(__FILE__) ?>images/gp1.png?v2" style="width:100%" >
+	<img src="<?php echo plugin_dir_url(__FILE__) ?>images/gp1.png" style="width:100%" >
 </a>
 
 <h2><a href="admin.php?page=gard-pro-info" style='font-size: 19px;font-weight: bold;'>Now Try GARD Pro for FREE!</a></h2>

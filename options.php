@@ -183,6 +183,8 @@ $GARD_CSS = get_option('GARD_CSS');
 	<?php settings_fields(GARDPLUGINOPTIONS_ID.'_options'); ?>
 	
 	<h2>Google AdSense for Responsive Design v<?php echo GARDPLUGINOPTIONS_VER ?> &raquo; Settings</h2>
+	<a href='http://consultingwp.com?so=gard_pro' target="_blank"><span style='background-color:yellow;  padding: 5px 15px;margin-top: 10px;display: inline-block;border: 1px solid yellowgreen;color:black;font-weight:bold'>Need a WordPress coder?</span></a> <a href='http://consultingwp.com?so=gard_pro' target="_blank">Contact <span style="color:#d54e21">Consulting WP</span> about custom wordpress projects or error fixes.</a><br>
+
 	<table >
 		<tr>
 		<td style="vertical-align:top;">
@@ -194,19 +196,6 @@ $GARD_CSS = get_option('GARD_CSS');
 				   </tr>
 				</thead>
 				<tbody>
-				   <tr>
-					 <td colspan="2">
-						 <label for="need_help" style="width: 100%; text-align:center;display:block;">
-							<a href='#need_help' class='popup-with-zoom-anim'><?php _e('NEED HELP? Click Here.'); ?></a>
-						 </label>
-						<div class='zoom-anim-dialog mfp-hide help_content' id='need_help'>
-							<h2><?php _e('Need Help?'); ?></h2>
-							<p><?php _e('Every setting in GARD has an underlined title. The titles are underlined with a dashed underline.'); ?></p>
-							<p><?php _e('On most computer systems, your mouse should turn into a question mark when hovering over the title links.'); ?></p>
-							<p><?php _e('Simply click on any setting title, and a pop up will appear with help text for that section, just like this pop up did.'); ?></p>
-						</div></span>
-					</th>
-				   </tr>
 				   <tr>
 					 <td style="vertical-align:middle;">
 						 <label for="GARD_ID" style="width: 270px; display:block;">
@@ -797,40 +786,4 @@ $GARD_CSS = get_option('GARD_CSS');
 				});
 		});
 	});
-</script>
-
-<div class="afs_ads">&nbsp;</div>
-<script type="text/javascript">
-
-	(function() {
-	    var message = "Notice! This page probably looks all messed up. This is due to your ad blocker being installed.\n\nPlease disable the ad blocking on your domain so that you can see the settings page here correctly.\n\n:) Thank you!";
-
-	        // Define a function for showing the message.
-	        // Set a timeout of 2 seconds to give adblocker
-	        // a chance to do its thing
-	        // Source http://broadstreetads.com/blog/detect-ad-blocker/
-	        var tryMessage = function() {
-	            setTimeout(function() {
-	                if(!document.getElementsByClassName) return;
-	                var ads = document.getElementsByClassName('afs_ads'),
-	                    ad  = ads[ads.length - 1];
-
-	                if(!ad
-	                    || ad.innerHTML.length == 0
-	                    || ad.clientHeight === 0) {
-	                    alert(message);
-	                } else {
-	                    ad.style.display = 'none';
-	                }
-
-	            }, 3000);
-	        }
-
-	        /* Attach a listener for page load ... then show the message */
-	        if(window.addEventListener) {
-	            window.addEventListener('load', tryMessage, false);
-	        } else {
-	            window.attachEvent('onload', tryMessage); //IE
-	        }
-	})();
 </script>
