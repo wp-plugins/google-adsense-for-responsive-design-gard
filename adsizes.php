@@ -1,4 +1,5 @@
 <?php
+global $adsizes;
 $adsizes = array(
     #	Google Adsense Display and Text Unit Sizes
 		'970x90'  => 'Large Leaderboard', 
@@ -28,3 +29,5 @@ $adsizes = array(
 		'120x90'  => 'Displays 3 links'
 
 );
+
+$GLOBALS['adsizes'] = $adsizes;

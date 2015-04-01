@@ -3,79 +3,81 @@
     Plugin Name: Google Adsense for Responsive Design - GARD
 	Plugin URI: http://thedigitalhippies.com/gard
 	Description: Allows you to use shortcode to display responsive adsense ads throughout your responsive theme.
-	Version: 2.21
+	Version: 2.22
 	Author: The Plugin Factory,The Digital Hippies
 	Author URI: http://thedigitalhippies.com
 */
 
 
-if (!function_exists('wp_get_current_user') ) {
-	include_once( ABSPATH . '/wp-includes/pluggable.php' );
-}
 
-function GARD_PERMISSION_CHECK() {
-	if (!current_user_can('manage_options')) {
-		return FALSE;
-		//wp_die( __('You do not have sufficient permissions to access this page.') );
-	} else {
-		return TRUE;
-	}
-}
+if( is_admin() ) {
 
-if( is_admin() && GARD_PERMISSION_CHECK() ) {
-	
-	include('adsizes.php');
+	function start_gard_now() {
 
-	define('GARDPLUGINOPTIONS_VER', '2.21');
-	define('GARDPLUGINOPTIONS_ID', 'GARD-plugin-options');
-	define('GARDPLUGINOPTIONS_NICK', 'Google Adsense for Responsive Design');
-	define('GARD_FOLDER', dirname(__FILE__) );
-	define('GARD_PRO_LINK', 'http://thepluginfactory.co/warehouse/gard-pro/');
-	define('GARD_PLUGIN_SUPPORT_URL', 'http://thepluginfactory.co/community/forum/plugin-specific/gard-google-adsense-for-responsive-design/');
-	define('GARD_PLUGIN_SUPPORT_LINK', '<a href="http://thepluginfactory.co/community/forum/plugin-specific/gard-google-adsense-for-responsive-design/" title="GARD Support Forum" target="_blank">GARD Support Forum</a>');
+		include('adsizes.php');
+
+		define('GARDPLUGINOPTIONS_VER', '2.22');
+		define('GARDPLUGINOPTIONS_ID', 'GARD-plugin-options');
+		define('GARDPLUGINOPTIONS_NICK', 'Google Adsense for Responsive Design');
+		define('GARD_FOLDER', dirname(__FILE__) );
+		define('GARD_PRO_LINK', 'http://thepluginfactory.co/warehouse/gard-pro/');
+		define('GARD_PLUGIN_SUPPORT_URL', 'http://thepluginfactory.co/community/forum/plugin-specific/gard-google-adsense-for-responsive-design/');
+		define('GARD_PLUGIN_SUPPORT_LINK', '<a href="http://thepluginfactory.co/community/forum/plugin-specific/gard-google-adsense-for-responsive-design/" title="GARD Support Forum" target="_blank">GARD Support Forum</a>');
 
 
-	function gard_register() {
-		include(dirname(__FILE__) . '/register.php');
-	}	
+		function gard_register() {
+			include(dirname(__FILE__) . '/register.php');
+		}	
 
-	function gard_options_page() { 
-		include(dirname(__FILE__) . '/options.php');
-	}
-
-	function gard_menu() {
-		include(dirname(__FILE__) . '/menu.php');
-	}
-
-	function gard_help()  { 
-		include(dirname(__FILE__) . '/help.php');
-	}
-
-	function gard_pro_settings() {
-		include(dirname(__FILE__) . '/pro.php');
-	}
-
-	function GARD_ENQUEUE() {
-		wp_register_script( 'spectrum_js', plugins_url( '/js/spectrum/spectrum.js', __FILE__ ) );
-		wp_enqueue_script(  'spectrum_js' );
-
-		wp_register_style( 'spectrum_css', plugins_url( '/js/spectrum/spectrum.css', __FILE__ ) );
-		wp_enqueue_style(  'spectrum_css' );
-
-		wp_enqueue_script(  'jquery' );
-	}
-
-	function GARD_PRO_plugin_links($links, $file) {
-		if ($file == 'google-adsense-for-responsive-design-gard/index.php' ){
-			$links[] = '<a target="_blank" style="color: #cc0000; font-weight: bold;" href="http://thepluginfactory.co/warehouse/gard-pro/?so=gard_manage_plugins">Upgrade to GARD Pro</a>';
+		function gard_options_page() { 
+			include(dirname(__FILE__) . '/options.php');
 		}
-		return $links;
-	}
 
-	add_action( 'admin_init','gard_register' );
-	add_action( 'admin_menu', 'gard_menu' );
-	add_action( 'admin_init', 'GARD_ENQUEUE' );
-	add_filter( 'plugin_row_meta', 'GARD_PRO_plugin_links', 10, 2 );
+		function gard_menu() {
+			include(dirname(__FILE__) . '/menu.php');
+		}
+
+		function gard_help()  { 
+			include(dirname(__FILE__) . '/help.php');
+		}
+
+		function gard_pro_settings() {
+			include(dirname(__FILE__) . '/pro.php');
+		}
+
+		function GARD_ENQUEUE() {
+			wp_register_script( 'spectrum_js', plugins_url( '/js/spectrum/spectrum.js', __FILE__ ) );
+			wp_enqueue_script(  'spectrum_js' );
+
+			wp_register_style( 'spectrum_css', plugins_url( '/js/spectrum/spectrum.css', __FILE__ ) );
+			wp_enqueue_style(  'spectrum_css' );
+
+			wp_enqueue_script(  'jquery' );
+		}
+
+		function GARD_PRO_plugin_links($links, $file) {
+			if ($file == 'google-adsense-for-responsive-design-gard/index.php' ){
+				$links[] = '<a target="_blank" style="color: #cc0000; font-weight: bold;" href="http://thepluginfactory.co/warehouse/gard-pro/?so=gard_manage_plugins">Upgrade to GARD Pro</a>';
+			}
+			return $links;
+		}
+
+		add_action( 'admin_init','gard_register' );
+		add_action( 'admin_menu', 'gard_menu' );
+		add_action( 'admin_init', 'GARD_ENQUEUE' );
+		add_filter( 'plugin_row_meta', 'GARD_PRO_plugin_links', 10, 2 );
+	}
+	
+
+	function gard_restrict_admin() {
+
+		if ( ! current_user_can( 'manage_options' ) && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+			return;
+		} 
+
+	}
+	add_action( 'admin_init', 'gard_restrict_admin', 1 );
+	start_gard_now();
 
 } else {
 
