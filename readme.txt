@@ -1,10 +1,10 @@
-﻿=== Google AdSense for Responsive Design - GARD ===
+=== Google AdSense for Responsive Design - GARD ===
 Contributors: The Plugin Factory
 Donate link: http://thedigitalhippies.com/garddonate
 Tags: responsive, AdSense, responsive AdSense, Google AdSense, responsive ads, responsive design, responsive design, gard, advertising, ads, The Plugin Factory
 Requires at least: 3.0.1
 Tested up to: 3.8
-Stable tag: 2.21
+Stable tag: 2.22
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ GARD (Google AdSense for Responsive Design) allows you to easily place Responsiv
 
 == Description ==
 
-GARD allows you to easily place responsive (asynchronous optional) Google AdSense in your website's content via the use of the shortcode [GARD]. GARD offers extremem control over ad placement and features. With a super simple "BASIC MODE", all you need to do is drop in your AdSense publisher ID, check a few boxes, and you're all set with a fully responsive AdSense campaign.
+GARD allows you to easily place responsive (asynchronous optional) Google AdSense in your website's content via the use of the shortcode [GARD]. GARD offers extreme control over ad placement and features. With a super simple "BASIC MODE", all you need to do is drop in your AdSense publisher ID, check a few boxes, and you're all set with a fully responsive AdSense campaign.
 
 GARD allows custom CSS styling, so you can customize the look of ads anytime you'd like.
 
@@ -139,6 +139,10 @@ Support is available on [GARD Official WordPress Plugin Support Forum](http://th
 3. Widget Setup. Enable the GARD widget for all users, or only guests, and give it a title. (widget.png)
 
 == Changelog ==
+
+= 2.22 =
+* [REMOVED] Bitcoin donation option.
+* [ADDED] http://ConsultingWP.com link on options page.
 
 = 2.2 =
 * [ADDED] Ability to show ads to desktop only.
