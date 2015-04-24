@@ -183,7 +183,7 @@ $GARD_CSS = get_option('GARD_CSS');
 	<?php settings_fields(GARDPLUGINOPTIONS_ID.'_options'); ?>
 	
 	<h2>Google AdSense for Responsive Design v<?php echo GARDPLUGINOPTIONS_VER ?> &raquo; Settings</h2>
-	<a href='http://consultingwp.com?so=gard_pro' target="_blank"><span style='background-color:yellow;  padding: 5px 15px;margin-top: 10px;display: inline-block;border: 1px solid yellowgreen;color:black;font-weight:bold'>Need a WordPress coder?</span></a> <a href='http://consultingwp.com?so=gard_pro' target="_blank">Contact <span style="color:#d54e21">Consulting WP</span> about custom wordpress projects or error fixes.</a><br>
+	<a href='http://consultingwp.com?so=gard' target="_blank"><span style='background-color:yellow;  padding: 5px 15px;margin-top: 10px;display: inline-block;border: 1px solid yellowgreen;color:black;font-weight:bold'>Need a WordPress coder?</span></a> <a href='http://consultingwp.com?so=gard' target="_blank">Contact <span style="color:#d54e21">Consulting WP</span> about custom wordpress projects or error fixes.</a><br>
 
 	<table >
 		<tr>
